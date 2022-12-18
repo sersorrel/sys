@@ -20,6 +20,7 @@
 
     nixosModules.default = { ... }: {
       imports = [
+        ./nixos/launchpad.nix
         ./nixos/sudo-timeout.nix
       ];
       environment.shellAliases = {
