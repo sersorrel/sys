@@ -14,6 +14,9 @@
     };
 
     homeModules.default = { ... }: {
+      imports = [
+        ./hm/any-nix-shell.nix
+      ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
     };
