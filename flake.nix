@@ -17,6 +17,7 @@
       imports = [
         ./hm/any-nix-shell.nix
         ./hm/bat.nix
+        ./hm/comma.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
