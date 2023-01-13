@@ -19,6 +19,7 @@
         ./hm/bat.nix
         ./hm/comma.nix
         ./hm/direnv.nix
+        ./hm/exa.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;

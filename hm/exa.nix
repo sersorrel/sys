@@ -1,0 +1,17 @@
+{ config, lib, pkgs, ... }:
+
+{
+  options = {
+    sys.exa.enable = lib.mkOption {
+      description = "Whether to install exa, an ls replacement.";
+      type = lib.types.bool;
+      default = true;
+    };
+  };
+  config = lib.mkIf config.sys.exa.enable {
+    home.packages = [ pkgs.exa ];
+    home.sessionVaraibles.EXA_COLORS = lib.concatStringsSep ":" (lib.mapAttrsToList (name: value: "${name}=${value}") {
+      core = "1;31"; # bold red
+    });
+  };
+}
