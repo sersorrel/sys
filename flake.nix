@@ -20,6 +20,7 @@
         ./hm/comma.nix
         ./hm/direnv.nix
         ./hm/exa.nix
+        ./hm/fd.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
