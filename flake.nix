@@ -22,6 +22,7 @@
         ./hm/exa.nix
         ./hm/fd.nix
         ./hm/fish.nix
+        ./hm/fzf.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
