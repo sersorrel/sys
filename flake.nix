@@ -25,6 +25,7 @@
         ./hm/fzf.nix
         ./hm/git.nix
         ./hm/less.nix
+        ./hm/nix.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
