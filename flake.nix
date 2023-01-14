@@ -24,6 +24,7 @@
         ./hm/fish.nix
         ./hm/fzf.nix
         ./hm/git.nix
+        ./hm/less.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
