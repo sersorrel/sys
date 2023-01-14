@@ -26,6 +26,7 @@
         ./hm/git.nix
         ./hm/less.nix
         ./hm/nix.nix
+        ./hm/ripgrep.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
