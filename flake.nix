@@ -18,6 +18,7 @@
         ./hm/any-nix-shell.nix
         ./hm/bat.nix
         ./hm/comma.nix
+        ./hm/dircolors.nix
         ./hm/direnv.nix
         ./hm/exa.nix
         ./hm/fd.nix
