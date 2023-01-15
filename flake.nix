@@ -27,6 +27,7 @@
         ./hm/less.nix
         ./hm/nix.nix
         ./hm/ripgrep.nix
+        ./hm/starship.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
