@@ -23,6 +23,7 @@
         ./hm/fd.nix
         ./hm/fish.nix
         ./hm/fzf.nix
+        ./hm/git-fast-forward-all
         ./hm/git.nix
         ./hm/less.nix
         ./hm/nix.nix
