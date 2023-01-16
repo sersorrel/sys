@@ -28,6 +28,7 @@
         ./hm/nix.nix
         ./hm/ripgrep.nix
         ./hm/starship.nix
+        ./hm/neovim
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
