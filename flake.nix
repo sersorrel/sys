@@ -3,8 +3,6 @@
 
   inputs = {
 
-    nixpkgs.url = "nixpkgs";
-
   };
 
   outputs = inputs: {
