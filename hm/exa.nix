@@ -10,7 +10,7 @@
   };
   config = lib.mkIf config.sys.exa.enable {
     home.packages = [ pkgs.exa ];
-    home.sessionVaraibles.EXA_COLORS = lib.concatStringsSep ":" (lib.mapAttrsToList (name: value: "${name}=${value}") {
+    home.sessionVariables.EXA_COLORS = lib.concatStringsSep ":" (lib.mapAttrsToList (name: value: "${name}=${value}") {
       core = "1;31"; # bold red
     });
   };
