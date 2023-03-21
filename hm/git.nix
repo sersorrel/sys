@@ -9,12 +9,12 @@
     };
     sys.git.name = lib.mkOption {
       description = "What name to use for git commits.";
-      type = types.nullOr types.str;
+      type = lib.types.nullOr lib.types.str;
       default = null;
     };
     sys.git.email = lib.mkOption {
       description = "What email address to use for git commits.";
-      type = types.nullOr (types.strMatching ".*@.*");
+      type = lib.types.nullOr (lib.types.strMatching ".*@.*");
       default = null;
     };
   };
