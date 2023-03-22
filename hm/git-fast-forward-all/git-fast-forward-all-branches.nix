@@ -2,6 +2,7 @@
 , stdenv
 , fetchFromGitHub
 , makeWrapper
+, git
 }:
 
 stdenv.mkDerivation {
@@ -42,6 +43,9 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ makeWrapper ];
   installPhase = ''
     install -Dm755 -t $out/bin git-fast-forward-all
+  '';
+  postFixup = ''
+    wrapProgram $out/bin/git-fast-forward-all --prefix PATH : ${lib.makeBinPath [ git ]}
   '';
   meta = {
     license = [ lib.licenses.mpl20 ];
