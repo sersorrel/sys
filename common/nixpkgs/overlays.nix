@@ -1,0 +1,109 @@
+{ unstable, here }:
+
+let
+  localPath = path: let
+    inherit (builtins) stringLength substring;
+    # careful here, otherwise we accidentally start copying things to the store
+    path' = toString path;
+    this' = toString ./.;
+    pathLen = stringLength path';
+    thisLen = stringLength this';
+  in assert substring 0 thisLen path' == this'; here + (substring thisLen pathLen path');
+in
+[
+  (self: super: {
+    # out-of-date software/waiting for backports
+    obsidian-export = assert !(super ? obsidian-export); super.callPackage (localPath ./programs/obsidian-export.nix) {};
+    unicode-paracode = assert builtins.compareVersions super.unicode-paracode.version "2.9" != 1; super.unicode-paracode.overrideAttrs (old: { # https://github.com/garabik/unicode/pull/21
+      patches = (old.patches or []) ++ [
+        (super.fetchpatch {
+          name = "show-unicode1-name-as-fallback.patch";
+          url = "https://github.com/garabik/unicode/pull/21/commits/2c11b705810a5a3a927e2b36ed6d32ce2867a6f7.patch";
+          sha256 = "sha256-cVBXnsi7FGXki7woJj09k8joyP1695HsOTWktPtFg1c=";
+        })
+      ];
+    });
+    # custom patches
+    direnv = super.direnv.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/direnv-0001-reduce-verbosity.patch)
+      ];
+    });
+    i3status-rust = super.i3status-rust.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/i3status-rust-0001-uptime-warning.patch)
+        (localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch)
+        (localPath ./patches/i3status-rust-0003-kdeconnect-disconnected-idle.patch)
+      ];
+    });
+    kitty = super.kitty.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/kitty-0001-sound-theme.patch)
+      ];
+    });
+    rhythmbox = super.rhythmbox.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/rhythmbox-0001-no-pause-notification.patch)
+      ];
+    });
+    rink = super.rink.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/rink-0001-change-date-formats.patch)
+        (localPath ./patches/rink-0002-amp-hour.patch)
+      ];
+    });
+    # software not in nixpkgs
+    uoyweek = super.rustPlatform.buildRustPackage {
+      pname = "uoyweek";
+      version = "0.1.0";
+      src = super.fetchFromGitHub {
+        owner = "sersorrel";
+        repo = "uoyweek.rs";
+        rev = "d32e4096dee51641270cb4b624d7b0727f101f42";
+        sha256 = "17a2173myj6fxmgyaly6nz905b94vw6zr8qm5v2ig7yrxlqd9nnk";
+      };
+      cargoSha256 = "1xfgszxbj1ji0wpz01n9hhwnba7kxbbqk53r0sgxasxbzfmmknw5";
+    };
+    display-volume = super.rustPlatform.buildRustPackage {
+      pname = "display-volume";
+      version = "0.1.0";
+      src = super.fetchFromGitHub {
+        owner = "sersorrel";
+        repo = "display-volume";
+        rev = "318a70933869d3a5c50bce06bda2887c3c287e84";
+        sha256 = "1gqyxggxwk87ddcsisb4s1rw8f9z8lyxg95py0nn77q18w6f6srg";
+      };
+      cargoSha256 = "1a8rm1hnw7gmbvaps9p0kcr3v0vm7a0ax31qcfsghhl3nckr4nkm";
+      nativeBuildInputs = [
+        super.autoPatchelfHook
+      ];
+      buildInputs = [
+        super.libpulseaudio
+      ];
+    };
+    file2img = super.callPackage (localPath ./programs/file2img.nix) {};
+    fishPlugins = super.fishPlugins.overrideScope' (self': super': let
+      meta = {
+        pname = "fenv.rs";
+        version = "unstable-2022-10-28";
+        src = super.fetchFromGitHub {
+          owner = "sersorrel";
+          repo = "fenv.rs";
+          rev = "c3fba45c9d86f2177d3b698bede4e6476c2a2bd7";
+          sha256 = "01i44rmi99wjrggd6r99qpnmclxdjllgxl73kl06vx7p29hzgsx6";
+        };
+      };
+      fenv = super.rustPlatform.buildRustPackage {
+        inherit (meta) pname version src;
+        cargoSha256 = "0isq1niw5yw8ycvqkvs2l10jww6k5mpmwzyr2ag57imcfw8s1pik";
+      };
+    in {
+      foreign-env = super'.buildFishPlugin {
+        inherit (meta) pname version src;
+        preInstall = ''
+          sed -i 's|_fenv|${fenv}/bin/_fenv|g' functions/fenv.fish
+        '';
+      };
+    });
+  })
+]

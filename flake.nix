@@ -8,10 +8,11 @@
   outputs = inputs: {
 
     darwinModules.default = { ... }: {
-
+      _module.args.sysDir = ./.;
     };
 
     homeModules.default = { ... }: {
+      _module.args.sysDir = ./.;
       imports = [
         ./hm/any-nix-shell.nix
         ./hm/bat.nix
@@ -35,6 +36,7 @@
     };
 
     nixosModules.default = { ... }: {
+      _module.args.sysDir = ./.;
       imports = [
         ./nixos/launchpad.nix
         ./nixos/sudo-timeout.nix

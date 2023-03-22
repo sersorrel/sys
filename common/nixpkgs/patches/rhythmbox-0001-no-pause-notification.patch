@@ -1,0 +1,14 @@
+diff --git a/plugins/notification/rb-notification-plugin.c b/plugins/notification/rb-notification-plugin.c
+index 2d3d0cb50..6a40b8630 100644
+--- a/plugins/notification/rb-notification-plugin.c
++++ b/plugins/notification/rb-notification-plugin.c
+@@ -220,6 +220,9 @@ do_notify (RBNotificationPlugin *plugin,
+ 			gboolean playing = FALSE;
+ 			rb_shell_player_get_playing (plugin->shell_player, &playing, NULL);
+ 
++			if (playing == FALSE)
++				return;
++
+ 			notify_notification_add_action (notification,
+ 							rtl ? "media-skip-backward-rtl" : "media-skip-backward",
+ 							_("Previous"),

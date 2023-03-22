@@ -1,0 +1,13 @@
+diff --git a/src/blocks/kdeconnect.rs b/src/blocks/kdeconnect.rs
+index 90ae43c..6dbc9d7 100644
+--- a/src/blocks/kdeconnect.rs
++++ b/src/blocks/kdeconnect.rs
+@@ -646,7 +648,7 @@ impl Block for KDEConnect {
+         }
+ 
+         if !phone_reachable {
+-            self.output.set_state(State::Critical);
++            self.output.set_state(State::Idle);
+             self.output.set_icon("phone_disconnected")?;
+             self.output
+                 .set_texts(self.format_disconnected.render(&values)?);

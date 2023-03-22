@@ -1,0 +1,15 @@
+diff --git a/src/blocks/kdeconnect.rs b/src/blocks/kdeconnect.rs
+index 90ae43c..cddf1a7 100644
+--- a/src/blocks/kdeconnect.rs
++++ b/src/blocks/kdeconnect.rs
+@@ -632,7 +632,9 @@ impl Block for KDEConnect {
+         } else if charging {
+             self.output.set_state(State::Good);
+         } else {
+-            self.output.set_state(if charge <= self.bat_critical {
++            self.output.set_state(if charge <= 0 {
++                State::Idle
++            } else if charge <= self.bat_critical {
+                 State::Critical
+             } else if charge <= self.bat_warning {
+                 State::Warning

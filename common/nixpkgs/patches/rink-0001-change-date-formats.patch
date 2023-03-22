@@ -1,0 +1,20 @@
+diff --git a/core/datepatterns.txt b/core/datepatterns.txt
+index 05c661e..e3c467d 100644
+--- a/core/datepatterns.txt
++++ b/core/datepatterns.txt
+@@ -16,9 +16,13 @@ monthname day[[','] year][ hour24:min[:sec][ offset]][ adbc]
+ # ctime dates
+ weekday monthname day[ hour24:min[:sec]] fullyear
+ 
++# dates like "1 January 1970"
++day monthname year[ hour12:min[:sec] meridiem[ offset]][ adbc]
++day monthname year[ hour24:min[:sec][ offset]][ adbc]
++
+ # Astronomical dates like "1970 January 1"
+-year monthname day[ hour12:min[:sec] meridiem[ offset]][ adbc]
+-year monthname day[ hour24:min[:sec][ offset]][ adbc]
++fullyear monthname day[ hour12:min[:sec] meridiem[ offset]][ adbc]
++fullyear monthname day[ hour24:min[:sec][ offset]][ adbc]
+ 
+ # Today dates
+ hour12:min[:sec] meridiem[ offset]

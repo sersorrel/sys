@@ -1,0 +1,27 @@
+diff --git a/src/blocks/uptime.rs b/src/blocks/uptime.rs
+index bca13dd..3002a1b 100644
+--- a/src/blocks/uptime.rs
++++ b/src/blocks/uptime.rs
+@@ -11,7 +11,7 @@ use crate::errors::*;
+ use crate::scheduler::Task;
+ use crate::util::read_file;
+ use crate::widgets::text::TextWidget;
+-use crate::widgets::I3BarWidget;
++use crate::widgets::{I3BarWidget, State};
+ 
+ pub struct Uptime {
+     id: usize,
+@@ -96,6 +96,13 @@ impl Block for Uptime {
+             unreachable!()
+         };
+         self.text.set_text(text);
++
++        self.text.set_state(if weeks > 0 {
++            State::Warning
++        } else {
++            State::Idle
++        });
++
+         Ok(Some(self.update_interval.into()))
+     }
+ 
