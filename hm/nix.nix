@@ -21,7 +21,7 @@
     prefix = "{ unstable, here }:\n";
     processed = assert hasPrefix prefix raw; removePrefix prefix raw;
   in ''
-    # TODO: work out hot to get (applicable) overlays registered with this instance of nixpkgs-unstable
+    # TODO: work out how to get (applicable) overlays registered with this instance of nixpkgs-unstable
     let unstable = import ${escapeNixString (toString inputs.nixpkgs-unstable)} { system = ${escapeNixString pkgs.system}; config = import ${config.xdg.configFile."nixpkgs/config.nix".source}; }; here = /. + ${escapeNixString (toString (sysDir + "/common/nixpkgs"))}; in
     ${processed}
   '';
