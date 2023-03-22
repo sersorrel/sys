@@ -39,6 +39,25 @@ stdenv.mkDerivation {
          [ "$excode" -eq 0 ] || {
       ''
     )
+          (
+        builtins.toFile "warn-about-failed-merges.patch" ''
+          --- a/git-fast-forward-all
+          +++ b/git-fast-forward-all
+          @@ -42,7 +42,11 @@
+               fi
+
+               if [ "refs/heads/$branch" = "$curref" ]; then
+          -      git merge --ff-only "$remote/$upstream" 1>&- 2>&-
+          +      git merge --ff-only "$remote/$upstream" 1>&- 2>&- || {
+          +        echo "  skipped: dirty working tree"
+          +        ret=$(( $ret | $EPERM ))
+          +        continue
+          +      }
+               else
+                 git update-ref "refs/heads/$branch" "$remote/$upstream" 1>&- 2>&-
+               fi
+        ''
+      )
   ];
   nativeBuildInputs = [ makeWrapper ];
   installPhase = ''
