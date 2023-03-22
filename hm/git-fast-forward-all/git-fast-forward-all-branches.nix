@@ -19,8 +19,8 @@ stdenv.mkDerivation {
         --- a/git-fast-forward-all
         +++ b/git-fast-forward-all
         @@ -52,17 +52,6 @@ fast_forward_all() {
-            return "$ret"
-          }
+           return "$ret"
+         }
 
         -fetch_all
         -excode=$?
@@ -33,9 +33,9 @@ stdenv.mkDerivation {
         -  exit $EEXIST
         -fi
         -
-          fast_forward_all
-          excode=$?
-          [ "$excode" -eq 0 ] || {
+         fast_forward_all
+         excode=$?
+         [ "$excode" -eq 0 ] || {
       ''
     )
   ];
