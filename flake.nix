@@ -23,6 +23,7 @@
         ./hm/exa.nix
         ./hm/fd.nix
         ./hm/fish.nix
+        ./hm/fonts.nix
         ./hm/fzf.nix
         ./hm/git-fast-forward-all
         ./hm/git.nix
