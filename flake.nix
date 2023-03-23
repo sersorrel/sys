@@ -19,6 +19,7 @@
         ./hm/comma.nix
         ./hm/dircolors.nix
         ./hm/direnv.nix
+        ./hm/empty-trash.nix
         ./hm/exa.nix
         ./hm/fd.nix
         ./hm/fish.nix
