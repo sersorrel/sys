@@ -26,10 +26,11 @@
         ./hm/git-fast-forward-all
         ./hm/git.nix
         ./hm/less.nix
+        ./hm/neovim
         ./hm/nix.nix
         ./hm/ripgrep.nix
         ./hm/starship.nix
-        ./hm/neovim
+        ./hm/thumbnailers.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
