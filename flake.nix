@@ -33,6 +33,7 @@
         ./hm/ripgrep.nix
         ./hm/starship.nix
         ./hm/thumbnailers.nix
+        ./hm/xdg.nix
       ];
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
