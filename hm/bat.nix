@@ -5,7 +5,7 @@
     sys.bat.enable = lib.mkOption {
       description = "Whether to install bat, a command-line syntax highlighter.";
       type = lib.types.bool;
-      default = false;
+      default = true;
     };
   };
   config = lib.mkIf config.sys.bat.enable {
