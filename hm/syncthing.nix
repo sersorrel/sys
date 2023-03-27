@@ -22,5 +22,13 @@
         command = "syncthingtray --wait";
       };
     };
+    systemd.user.targets.tray = {
+      # Workaround for "Unit tray.target not found" when starting e.g. flameshot
+      # https://github.com/nix-community/home-manager/issues/2064
+      Unit = {
+        Description = "Fake tray target (workaround for home-manager problem)";
+        Requires = [ "graphical-session-pre.target" ];
+      };
+    };
   };
 }
