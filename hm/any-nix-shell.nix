@@ -10,7 +10,7 @@
   };
   config = lib.mkIf config.sys.any-nix-shell.enable {
     programs.fish.interactiveShellInit = ''
-      ${pkgs.any-nix-shell} fish --info-right | source
+      ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
     '';
   };
 }
