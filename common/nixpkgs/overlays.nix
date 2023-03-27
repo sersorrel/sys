@@ -85,17 +85,17 @@ in
     fishPlugins = super.fishPlugins.overrideScope' (self': super': let
       meta = {
         pname = "fenv.rs";
-        version = "unstable-2022-10-28";
+        version = "unstable-2023-03-27";
         src = super.fetchFromGitHub {
           owner = "sersorrel";
           repo = "fenv.rs";
-          rev = "c3fba45c9d86f2177d3b698bede4e6476c2a2bd7";
-          sha256 = "01i44rmi99wjrggd6r99qpnmclxdjllgxl73kl06vx7p29hzgsx6";
+          rev = "fe2e9cd6366f252eda08c71a2e7ff31e057bad95";
+          sha256 = "1z5qj05z3i1a60b65s96pgkk6gz98gx2rnap906pi05512wsdkms";
         };
       };
       fenv = super.rustPlatform.buildRustPackage {
         inherit (meta) pname version src;
-        cargoSha256 = "0isq1niw5yw8ycvqkvs2l10jww6k5mpmwzyr2ag57imcfw8s1pik";
+        cargoSha256 = "1mmd5s9gcx0wr2a37g7hc5rb354d3hhy8k29myvq5sw6917kgbhj";
       };
     in {
       foreign-env = super'.buildFishPlugin {
