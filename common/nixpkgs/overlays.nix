@@ -38,7 +38,7 @@ in
     });
     kitty = super.kitty.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
-        (localPath ./patches/kitty-0001-sound-theme.patch)
+        #(localPath ./patches/kitty-0001-sound-theme.patch) # TODO broken on 23.05
       ];
     });
     rhythmbox = super.rhythmbox.overrideAttrs (old: {
