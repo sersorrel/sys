@@ -31,9 +31,9 @@ in
     });
     i3status-rust = super.i3status-rust.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
-        (localPath ./patches/i3status-rust-0001-uptime-warning.patch)
-        (localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch)
-        (localPath ./patches/i3status-rust-0003-kdeconnect-disconnected-idle.patch)
+        #(localPath ./patches/i3status-rust-0001-uptime-warning.patch) # TODO broken on 23.05
+        #(localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch) # TODO broken on 23.05
+        #(localPath ./patches/i3status-rust-0003-kdeconnect-disconnected-idle.patch) # TODO broken on 23.05
       ];
     });
     kitty = super.kitty.overrideAttrs (old: {
