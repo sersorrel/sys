@@ -89,8 +89,8 @@ in
         src = super.fetchFromGitHub {
           owner = "sersorrel";
           repo = "fenv.rs";
-          rev = "fe2e9cd6366f252eda08c71a2e7ff31e057bad95";
-          sha256 = "1z5qj05z3i1a60b65s96pgkk6gz98gx2rnap906pi05512wsdkms";
+          rev = "de14458fb472d2832110df88dc5e2a5d9c12e684";
+          sha256 = "1xjc8krq2yakdr2i9mvpsvc4sp9a34a14yvqxkp35s7zi0qwak3d";
         };
       };
       fenv = super.rustPlatform.buildRustPackage {
