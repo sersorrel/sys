@@ -5,12 +5,7 @@
 
   };
 
-  outputs = inputs: let
-    mkLib = lib: rec {
-      concatMapAttrsToList = f: attrs: builtins.concatMap (name: f name attrs.${name}) (lib.attrNames attrs); # see lib.mapAttrsToList
-      mkImports = dir: concatMapAttrsToList (name: value: if (value == "regular" && lib.hasSuffix ".nix" name) || (value == "directory" && !lib.hasPrefix "." name) then [(dir + "/${name}")] else []) (builtins.readDir dir);
-    };
-  in {
+  outputs = inputs: {
 
     darwinModules.default = { ... }: {
       _module.args.sysDir = ./.;
@@ -18,20 +13,32 @@
 
     homeModules.default = { lib, ... }: {
       _module.args.sysDir = ./.;
-      imports = (mkLib lib).mkImports ./hm;
+      imports = inputs.self.lib.importDir ./hm;
       programs.home-manager.enable = true;
       home.enableNixpkgsReleaseCheck = true;
     };
 
     nixosModules.default = { lib, ... }: {
       _module.args.sysDir = ./.;
-      imports = (mkLib lib).mkImports ./nixos;
+      imports = inputs.self.lib.importDir ./nixos;
       environment.shellAliases = {
         l = null;
         ll = null;
         ls = null;
       };
       users.mutableUsers = false;
+    };
+
+    lib = let
+      inherit (builtins) attrNames concatMap stringLength substring;
+      concatMapAttrsToList = f: attrs: concatMap (name: f name attrs.${name}) (attrNames attrs); # see lib.mapAttrsToList
+      hasPrefix = prefix: s: substring 0 (stringLength prefix) s == prefix; # from nixpkgs
+      hasSuffix = suffix: s: let
+        length = stringLength s;
+        suffixLength = stringLength suffix;
+      in length >= suffixLength && substring (length - suffixLength) length s == suffix; # from nixpkgs
+    in {
+      importDir = dir: concatMapAttrsToList (name: value: if (value == "regular" && hasSuffix ".nix" name) || (value == "directory" && !hasPrefix "." name) then [(dir + "/${name}")] else []) (builtins.readDir dir);
     };
 
   };
