@@ -5,6 +5,7 @@
     "clion"
     "discord"
     "ffmpeg-full"
+    "google-chrome"
     "obsidian"
     "rider"
     "slack"
