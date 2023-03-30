@@ -29,6 +29,11 @@ in
         (localPath ./patches/direnv-0001-reduce-verbosity.patch)
       ];
     });
+    i3 = super.i3.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/i3-0001-i3bar-border.patch)
+      ];
+    });
     i3lock-color = super.i3lock-color.overrideAttrs (old: {
       src = super.fetchFromGitHub {
         owner = "sersorrel";

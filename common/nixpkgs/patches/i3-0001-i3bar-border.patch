@@ -1,0 +1,52 @@
+diff --git a/i3bar/src/xcb.c b/i3bar/src/xcb.c
+index 671588fe..6014b340 100644
+--- a/i3bar/src/xcb.c
++++ b/i3bar/src/xcb.c
+@@ -113,7 +113,7 @@ static const int ws_hoff_px = 4;
+ static const int ws_voff_px = 3;
+ 
+ /* Offset between two workspace buttons */
+-static const int ws_spacing_px = 1;
++static const int ws_spacing_px = 0;
+ 
+ /* Offset between the statusline and 1) workspace buttons on the left
+  *                                   2) the tray or screen edge on the right */
+@@ -292,16 +292,16 @@ static void draw_statusline(i3_output *output, uint32_t clip_left, bool use_focu
+ 
+             /* Draw the border. */
+             draw_util_rectangle(&output->statusline_buffer, border_color,
+-                                x, logical_px(1),
++                                x, 0,
+                                 full_render_width,
+-                                bar_height - logical_px(2));
++                                bar_height);
+ 
+             /* Draw the background. */
+             draw_util_rectangle(&output->statusline_buffer, bg_color,
+                                 x + has_border * logical_px(block->border_left),
+-                                logical_px(1) + has_border * logical_px(block->border_top),
++                                has_border * logical_px(block->border_top),
+                                 full_render_width - has_border * logical_px(block->border_right + block->border_left),
+-                                bar_height - has_border * logical_px(block->border_bottom + block->border_top) - logical_px(2));
++                                bar_height - has_border * logical_px(block->border_bottom + block->border_top));
+         }
+ 
+         draw_util_text(text, &output->statusline_buffer, fg_color, bg_color,
+@@ -1973,14 +1973,13 @@ void reconfig_windows(bool redraw_bars) {
+  */
+ static void draw_button(surface_t *surface, color_t fg_color, color_t bg_color, color_t border_color,
+                         int x, int width, int text_width, i3String *text) {
+-    int height = bar_height - 2 * logical_px(1);
++    int height = bar_height;
+ 
+     /* Draw the border of the button. */
+-    draw_util_rectangle(surface, border_color, x, logical_px(1), width, height);
++    draw_util_rectangle(surface, border_color, x, 0, width, height);
+ 
+     /* Draw the inside of the button. */
+-    draw_util_rectangle(surface, bg_color, x + logical_px(1), 2 * logical_px(1),
+-                        width - 2 * logical_px(1), height - 2 * logical_px(1));
++    draw_util_rectangle(surface, bg_color, x, 0, width, height);
+ 
+     draw_util_text(text, surface, fg_color, bg_color, x + (width - text_width) / 2,
+                    bar_height / 2 - font.height / 2, text_width);
