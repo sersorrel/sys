@@ -1,0 +1,18 @@
+diff --git a/src/blocks/amd_gpu.rs b/src/blocks/amd_gpu.rs
+index 3d9cad14..54ba7b97 100644
+--- a/src/blocks/amd_gpu.rs
++++ b/src/blocks/amd_gpu.rs
+@@ -73,10 +73,9 @@ pub async fn run(config: Config, mut api: CommonApi) -> Result<()> {
+             "vram_used_percents" => Value::percents(info.vram_used_bytes / info.vram_total_bytes * 100.0),
+         });
+ 
+-        widget.state = match info.utilization_percents {
+-            x if x > 90.0 => State::Critical,
+-            x if x > 60.0 => State::Warning,
+-            x if x > 30.0 => State::Info,
++        widget.state = match info.vram_used_bytes / info.vram_total_bytes * 100.0 {
++            x if x > 95.0 => State::Critical,
++            x if x > 80.0 => State::Warning,
+             _ => State::Idle,
+         };
+ 
