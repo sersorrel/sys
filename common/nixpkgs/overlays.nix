@@ -29,6 +29,14 @@ in
         (localPath ./patches/direnv-0001-reduce-verbosity.patch)
       ];
     });
+    i3lock-color = super.i3lock-color.overrideAttrs (old: {
+      src = super.fetchFromGitHub {
+        owner = "sersorrel";
+        repo = "i3lock-color";
+        rev = "8ab09b8d3fdd87ac0b14a3f419281a4791fa2c78";
+        sha256 = "1l25x4wx3ar6lfpxcm5whzpxyblcs8blf4gqi3vh2ynvn7cn1qib";
+      };
+    });
     i3status-rust = super.i3status-rust.overrideAttrs (old: rec {
       # TODO: remove version override after next release https://github.com/greshake/i3status-rust/issues/1848
       version = assert builtins.compareVersions super.i3status-rust.version "0.30.5" != 1; "unstable-2023-03-29";
