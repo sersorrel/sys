@@ -61,11 +61,6 @@ in
         (localPath ./patches/i3status-rust-0003-gpu-use-vram-not-utilisation.patch)
       ];
     });
-    kitty = super.kitty.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-        #(localPath ./patches/kitty-0001-sound-theme.patch) # TODO broken on 23.05
-      ];
-    });
     rhythmbox = super.rhythmbox.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/rhythmbox-0001-no-pause-notification.patch)
