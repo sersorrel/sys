@@ -1,27 +1,18 @@
 diff --git a/src/blocks/uptime.rs b/src/blocks/uptime.rs
-index bca13dd..3002a1b 100644
+index 7402d3f2..dd55d0c4 100644
 --- a/src/blocks/uptime.rs
 +++ b/src/blocks/uptime.rs
-@@ -11,7 +11,7 @@ use crate::errors::*;
- use crate::scheduler::Task;
- use crate::util::read_file;
- use crate::widgets::text::TextWidget;
--use crate::widgets::I3BarWidget;
-+use crate::widgets::{I3BarWidget, State};
- 
- pub struct Uptime {
-     id: usize,
-@@ -96,6 +96,13 @@ impl Block for Uptime {
-             unreachable!()
+@@ -72,7 +72,12 @@ pub async fn run(config: Config, mut api: CommonApi) -> Result<()> {
+             format!("{minutes}m {seconds}s")
          };
-         self.text.set_text(text);
+ 
+-        let mut widget = Widget::new().with_format(format.clone());
 +
-+        self.text.set_state(if weeks > 0 {
++        let mut widget = Widget::new().with_format(format.clone()).with_state(if weeks > 0 {
 +            State::Warning
 +        } else {
 +            State::Idle
 +        });
-+
-         Ok(Some(self.update_interval.into()))
-     }
- 
+         widget.set_values(map! {
+           "icon" => Value::icon(api.get_icon("uptime")?),
+           "text" => Value::text(text)

@@ -56,10 +56,9 @@ in
         outputHash = "sha256-lpH4rd/Yj1vQsGG1FI+S3oUDOPLrH/TLrN+D2YHUEdg=";
       });
       patches = (old.patches or []) ++ [
-        #(localPath ./patches/i3status-rust-0001-uptime-warning.patch) # TODO broken on 23.05
-        #(localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch) # TODO broken on 23.05
-        #(localPath ./patches/i3status-rust-0003-kdeconnect-disconnected-idle.patch) # TODO broken on 23.05
-        (localPath ./patches/i3status-rust-0004-gpu-use-vram-not-utilisation.patch)
+        (localPath ./patches/i3status-rust-0001-uptime-warning.patch)
+        (localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch)
+        (localPath ./patches/i3status-rust-0003-gpu-use-vram-not-utilisation.patch)
       ];
     });
     kitty = super.kitty.overrideAttrs (old: {

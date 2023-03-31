@@ -1,15 +1,13 @@
 diff --git a/src/blocks/kdeconnect.rs b/src/blocks/kdeconnect.rs
-index 90ae43c..cddf1a7 100644
+index ee14688d..70820ca5 100644
 --- a/src/blocks/kdeconnect.rs
 +++ b/src/blocks/kdeconnect.rs
-@@ -632,7 +632,9 @@ impl Block for KDEConnect {
-         } else if charging {
-             self.output.set_state(State::Good);
-         } else {
--            self.output.set_state(if charge <= self.bat_critical {
-+            self.output.set_state(if charge <= 0 {
-+                State::Idle
-+            } else if charge <= self.bat_critical {
-                 State::Critical
-             } else if charge <= self.bat_warning {
-                 State::Warning
+@@ -117,6 +117,8 @@ pub async fn run(config: Config, mut api: CommonApi) -> Result<()> {
+                     if battery_state {
+                         widget.state = if charging {
+                             State::Good
++                        } else if level <= 0 {
++                            State::Idle
+                         } else if level <= config.bat_critical {
+                             State::Critical
+                         } else if level <= config.bat_info {
