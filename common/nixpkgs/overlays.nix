@@ -84,6 +84,7 @@ in
       };
       cargoSha256 = "1xfgszxbj1ji0wpz01n9hhwnba7kxbbqk53r0sgxasxbzfmmknw5";
     };
+    binary-ninja = super.callPackage (localPath ./programs/binary-ninja.nix) {};
     display-volume = super.rustPlatform.buildRustPackage {
       pname = "display-volume";
       version = "0.1.0";
