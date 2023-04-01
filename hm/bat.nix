@@ -13,7 +13,7 @@
       enable = true;
       config = {
         italic-text = "always";
-        style = "numbers,changes";
+        style = "plain";
         theme = "gruvbox-light";
       };
     };
