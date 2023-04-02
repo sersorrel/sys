@@ -72,6 +72,28 @@ in
         (localPath ./patches/rink-0002-amp-hour.patch)
       ];
     });
+    steam = super.steam.overrideAttrs (old: let # https://github.com/tejing1/nixos-config/blob/78e681e4b823c59751730531468a8e9781593ba1/overlays/steam-fix-screensaver/default.nix
+      preloadLibFor = bits: assert bits == 32 || bits == 64; super.runCommandWith {
+        stdenv = if bits == 64 then self.stdenv else self.stdenv_32bit;
+        runLocal = false;
+        name = "filter_SDL_DisableScreenSaver.${toString bits}.so";
+        derivationArgs = {};
+      } "gcc -shared -fPIC -ldl -m${toString bits} -o $out ${./steam-filter-sdl-disablescreensaver.c}";
+      preloadLibs = super.runCommandLocal "filter_SDL_DisableScreenSaver" {} (builtins.concatStringsSep "\n" (builtins.attrValues (builtins.mapAttrs (platform: bits: ''
+        mkdir -p $out/${platform}
+        ln -s ${preloadLibFor bits} $out/${platform}/filter_SDL_DisableScreenSaver.so
+      '') {
+        x86_64 = 64;
+        i686 = 32;
+      })));
+    in {
+      nativeBuildInputs = (old.nativeBuildInputs or []) ++ [ self.makeWrapper ];
+      buildCommand = (old.buildCommand or "") + ''
+        steamBin="$(readlink $out/bin/steam)"
+        rm $out/bin/steam
+        makeWrapper $steamBin $out/bin/steam --prefix LD_PRELOAD : ${preloadLibs}/\$PLATFORM/filter_SDL_DisableScreenSaver.so
+      '';
+    });
     # software not in nixpkgs
     uoyweek = super.rustPlatform.buildRustPackage {
       pname = "uoyweek";
