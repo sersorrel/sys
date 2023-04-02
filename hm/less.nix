@@ -6,5 +6,6 @@
   home.sessionVariables = {
     LESS = "-iMR";
     LESSHISTFILE = "${config.xdg.cacheHome}/lesshst";
+    LESSQUIET = 1;
   };
 }
