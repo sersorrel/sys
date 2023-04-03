@@ -3,7 +3,7 @@
 {
   options = {
     sys.thumbnailers.enable = lib.mkOption {
-      description = "Whether to enable custom thumbnailers.";
+      description = "Whether to enable thumbnailers.";
       type = lib.types.bool;
       default = false;
     };
