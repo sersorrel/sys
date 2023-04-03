@@ -1,0 +1,1187 @@
+diff -u a/glimmer-2.10.30/po/am.po b/glimmer-2.10.30/po/am.po
+--- glimmer-2.10.30/po/am.po
++++ glimmer-2.10.30/po/am.po
+@@ -17,10 +17,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ #, fuzzy
+ msgid "Image Editor"
+diff -u a/glimmer-2.10.30/po/ar.po b/glimmer-2.10.30/po/ar.po
+--- glimmer-2.10.30/po/ar.po
++++ glimmer-2.10.30/po/ar.po
+@@ -19,11 +19,6 @@
+ "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+ "X-Generator: Virtaal 1.0.0-beta1\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "برنامج جنو لمعالجة الصور"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ast.po b/glimmer-2.10.30/po/ast.po
+--- glimmer-2.10.30/po/ast.po
++++ glimmer-2.10.30/po/ast.po
+@@ -20,10 +20,6 @@
+ "X-Generator: Virtaal 0.5.2\n"
+ "X-Launchpad-Export-Date: 2011-02-20 12:44+0000\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de manipulación d'Imaxe GNU"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Editor d'imaxe"
+diff -u a/glimmer-2.10.30/po/az.po b/glimmer-2.10.30/po/az.po
+--- glimmer-2.10.30/po/az.po
++++ glimmer-2.10.30/po/az.po
+@@ -16,10 +16,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "X-Generator: KBabel 0.9.5\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ #, fuzzy
+ msgid "Image Editor"
+diff -u a/glimmer-2.10.30/po/be.po b/glimmer-2.10.30/po/be.po
+--- glimmer-2.10.30/po/be.po
++++ glimmer-2.10.30/po/be.po
+@@ -17,10 +17,6 @@
+ "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+ "X-Poedit-Basepath: /tmp/glimmer-2.7.3/po\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer — праґрама праекту GNU для працы зь відарысамі"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Рэдактар відарысаў"
+diff -u a/glimmer-2.10.30/po/bg.po b/glimmer-2.10.30/po/bg.po
+--- glimmer-2.10.30/po/bg.po
++++ glimmer-2.10.30/po/bg.po
+@@ -18,10 +18,6 @@
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ "X-Generator: KBabel 1.11.4\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Редактор на изображения (Glimmer)"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Редактор на изображения"
+diff -u a/glimmer-2.10.30/po/br.po b/glimmer-2.10.30/po/br.po
+--- glimmer-2.10.30/po/br.po
++++ glimmer-2.10.30/po/br.po
+@@ -17,10 +17,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=n > 1;\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Goulev da zornata skeudennoù GNU"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Embanner skeudennoù"
+diff -u a/glimmer-2.10.30/po/bs.po b/glimmer-2.10.30/po/bs.po
+--- glimmer-2.10.30/po/bs.po
++++ glimmer-2.10.30/po/bs.po
+@@ -55,10 +55,6 @@
+ "procedura manipulacije slikom. Glimmer je dostupan za Linux, Microsoft Windows "
+ "i OS X."
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Gnuov program za obradu slika (Glimmer)"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Obrada slika"
+diff -u a/glimmer-2.10.30/po/ca.po b/glimmer-2.10.30/po/ca.po
+--- glimmer-2.10.30/po/ca.po
++++ glimmer-2.10.30/po/ca.po
+@@ -27,11 +27,6 @@
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ "X-Generator: Poedit 3.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de retoc d'imatges de GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ca@valencia.po b/glimmer-2.10.30/po/ca@valencia.po
+--- glimmer-2.10.30/po/ca@valencia.po
++++ glimmer-2.10.30/po/ca@valencia.po
+@@ -24,11 +24,6 @@
+ "X-Generator: Virtaal 0.7.1\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de retoc d'imatges de GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/csb.po b/glimmer-2.10.30/po/csb.po
+--- glimmer-2.10.30/po/csb.po
++++ glimmer-2.10.30/po/csb.po
+@@ -18,10 +18,6 @@
+ "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+ "|| n%100>=20) ? 1 : 2;\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Editora òbrôzów Glimmer"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr ""
+diff -u a/glimmer-2.10.30/po/cs.po b/glimmer-2.10.30/po/cs.po
+--- glimmer-2.10.30/po/cs.po
++++ glimmer-2.10.30/po/cs.po
+@@ -25,11 +25,6 @@
+ "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+ "X-Generator: Poedit 2.0.7\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/da.po b/glimmer-2.10.30/po/da.po
+--- glimmer-2.10.30/po/da.po
++++ glimmer-2.10.30/po/da.po
+@@ -69,12 +69,6 @@
+ "X-Language: da_DK\n"
+ "X-Source-Language: C\n"
+ 
+-# Titlen på billedvinduet, synes det er bedre den hedder Glimmer et det engelske Glimmer
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/de.po b/glimmer-2.10.30/po/de.po
+--- glimmer-2.10.30/po/de.po
++++ glimmer-2.10.30/po/de.po
+@@ -35,11 +35,6 @@
+ "X-Generator: Poedit 3.0\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/dz.po b/glimmer-2.10.30/po/dz.po
+--- glimmer-2.10.30/po/dz.po
++++ glimmer-2.10.30/po/dz.po
+@@ -21,10 +21,6 @@
+ "X-Poedit-Country: Bhutan\n"
+ "X-Poedit-SourceCharset: utf-8\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "་་ཨི་མེཇི་་མ་ནུ་པུ་ལེ་ཤཱན་་པོརོ་གརམ།"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "གཟུགས་བརྙན་ ཞུན་དག་པ།"
+diff -u a/glimmer-2.10.30/po/el.po b/glimmer-2.10.30/po/el.po
+--- glimmer-2.10.30/po/el.po
++++ glimmer-2.10.30/po/el.po
+@@ -26,11 +26,6 @@
+ "X-Poedit-Bookmarks: 0,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Πρόγραμμα επεξεργασίας εικόνων GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/en_CA.po b/glimmer-2.10.30/po/en_CA.po
+--- glimmer-2.10.30/po/en_CA.po
++++ glimmer-2.10.30/po/en_CA.po
+@@ -18,10 +18,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Image Editor"
+diff -u a/glimmer-2.10.30/po/en_GB.po b/glimmer-2.10.30/po/en_GB.po
+--- glimmer-2.10.30/po/en_GB.po
++++ glimmer-2.10.30/po/en_GB.po
+@@ -24,11 +24,6 @@
+ "X-Generator: Gtranslator 3.36.0\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/eo.po b/glimmer-2.10.30/po/eo.po
+--- glimmer-2.10.30/po/eo.po
++++ glimmer-2.10.30/po/eo.po
+@@ -43,11 +43,6 @@
+ "X-Generator: Virtaal 0.7.1\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/glimmer.appdata.xml.in.h:1 ../desktop/glimmer.desktop.in.in.h:1
+-#: ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Bildmanipulilo (Glimmer = Glimmer)"
+-
+ #: ../desktop/glimmer.appdata.xml.in.h:2 ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+ msgstr "Krei bildojn aŭ redakti fotaĵojn"
+diff -u a/glimmer-2.10.30/po/es.po b/glimmer-2.10.30/po/es.po
+--- glimmer-2.10.30/po/es.po
++++ glimmer-2.10.30/po/es.po
+@@ -30,11 +30,6 @@
+ "X-Generator: Poedit 3.0\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de manipulación de imágenes de GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/et.po b/glimmer-2.10.30/po/et.po
+--- glimmer-2.10.30/po/et.po
++++ glimmer-2.10.30/po/et.po
+@@ -24,9 +24,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+ 
+-msgid "Glimmer"
+-msgstr "Glimmer - GNU pilditöötlusprogramm"
+-
+ msgid "Image Editor"
+ msgstr "Pildiredaktor"
+ 
+diff -u a/glimmer-2.10.30/po/eu.po b/glimmer-2.10.30/po/eu.po
+--- glimmer-2.10.30/po/eu.po
++++ glimmer-2.10.30/po/eu.po
+@@ -21,11 +21,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Irudiak Manipulatzeko GNU Programa"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/fa.po b/glimmer-2.10.30/po/fa.po
+--- glimmer-2.10.30/po/fa.po
++++ glimmer-2.10.30/po/fa.po
+@@ -18,10 +18,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "برنامهٔ روتوش تصاویر گنو"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "ویرایشگر تصویر"
+diff -u a/glimmer-2.10.30/po/fi.po b/glimmer-2.10.30/po/fi.po
+--- glimmer-2.10.30/po/fi.po
++++ glimmer-2.10.30/po/fi.po
+@@ -32,11 +32,6 @@
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ "X-Generator: Poedit 3.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer-kuvankäsittely"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/fr.po b/glimmer-2.10.30/po/fr.po
+--- glimmer-2.10.30/po/fr.po
++++ glimmer-2.10.30/po/fr.po
+@@ -34,11 +34,6 @@
+ "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+ "X-Generator: Lokalize 2.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Éditeur d’image Glimmer"
+-
+ # Utilisation de l’infinitif dans les infobulles du Bureau
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+diff -u a/glimmer-2.10.30/po/ga.po b/glimmer-2.10.30/po/ga.po
+--- glimmer-2.10.30/po/ga.po
++++ glimmer-2.10.30/po/ga.po
+@@ -16,10 +16,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ #, fuzzy
+ msgid "Image Editor"
+diff -u a/glimmer-2.10.30/po/gd.po b/glimmer-2.10.30/po/gd.po
+--- glimmer-2.10.30/po/gd.po
++++ glimmer-2.10.30/po/gd.po
+@@ -65,10 +65,6 @@
+ "deasachadh fìor-thoinnte. Tha Glimmer ri fhaighinn air Microsoft Windows agus "
+ "OSX cuideachd."
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Deasaiche dhealbhan"
+diff -u a/glimmer-2.10.30/po/gl.po b/glimmer-2.10.30/po/gl.po
+--- glimmer-2.10.30/po/gl.po
++++ glimmer-2.10.30/po/gl.po
+@@ -26,11 +26,6 @@
+ "X-Generator: Virtaal 0.7.1\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/glimmer.appdata.xml.in.h:1 ../desktop/glimmer.desktop.in.in.h:1
+-#: ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de Manipulación de Imaxes de GNU"
+-
+ #: ../desktop/glimmer.appdata.xml.in.h:2 ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+ msgstr "Crear imaxes e editar fotografías"
+diff -u a/glimmer-2.10.30/po/gu.po b/glimmer-2.10.30/po/gu.po
+--- glimmer-2.10.30/po/gu.po
++++ glimmer-2.10.30/po/gu.po
+@@ -19,10 +19,6 @@
+ "\n"
+ "\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU ચિત્ર જાળવણી કાર્યક્રમ"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "ચિત્ર સંપાદક"
+diff -u a/glimmer-2.10.30/po/he.po b/glimmer-2.10.30/po/he.po
+--- glimmer-2.10.30/po/he.po
++++ glimmer-2.10.30/po/he.po
+@@ -23,10 +23,6 @@
+ "X-Generator: Lokalize 1.0\n"
+ "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "תוכנת עיבוד התמונה של GNU"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ #, fuzzy
+ msgid "Image Editor"
+diff -u a/glimmer-2.10.30/po/hi.po b/glimmer-2.10.30/po/hi.po
+--- glimmer-2.10.30/po/hi.po
++++ glimmer-2.10.30/po/hi.po
+@@ -19,10 +19,6 @@
+ "\n"
+ "X-Generator: KBabel 1.9.1\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr ""
+diff -u a/glimmer-2.10.30/po/hr.po b/glimmer-2.10.30/po/hr.po
+--- glimmer-2.10.30/po/hr.po
++++ glimmer-2.10.30/po/hr.po
+@@ -43,11 +43,6 @@
+ "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+ "X-Generator: Poedit 3.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU program za obradu slika"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/hu.po b/glimmer-2.10.30/po/hu.po
+--- glimmer-2.10.30/po/hu.po
++++ glimmer-2.10.30/po/hu.po
+@@ -27,11 +27,6 @@
+ "X-Generator: Lokalize 19.12.3\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU képszerkesztő program"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/id.po b/glimmer-2.10.30/po/id.po
+--- glimmer-2.10.30/po/id.po
++++ glimmer-2.10.30/po/id.po
+@@ -20,11 +20,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Poedit 2.0.3\n"
+ 
+-#: ../desktop/glimmer.appdata.xml.in.h:1 ../desktop/glimmer.desktop.in.in.h:1
+-#: ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU Program Manipulasi Gambar"
+-
+ #: ../desktop/glimmer.appdata.xml.in.h:2 ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+ msgstr "Buat gambar dan sunting foto"
+diff -u a/glimmer-2.10.30/po/is.po b/glimmer-2.10.30/po/is.po
+--- glimmer-2.10.30/po/is.po
++++ glimmer-2.10.30/po/is.po
+@@ -23,11 +23,6 @@
+ "Plural-Forms: nplurals=2; plural=1;\n"
+ "X-Generator: Lokalize 2.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU Myndvinnsluforrit"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/it.po b/glimmer-2.10.30/po/it.po
+--- glimmer-2.10.30/po/it.po
++++ glimmer-2.10.30/po/it.po
+@@ -49,11 +49,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ja.po b/glimmer-2.10.30/po/ja.po
+--- glimmer-2.10.30/po/ja.po
++++ glimmer-2.10.30/po/ja.po
+@@ -26,11 +26,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer (Glimmer)"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ka.po b/glimmer-2.10.30/po/ka.po
+--- glimmer-2.10.30/po/ka.po
++++ glimmer-2.10.30/po/ka.po
+@@ -18,11 +18,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Poedit 3.0.1\n"
+
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/kk.po b/glimmer-2.10.30/po/kk.po
+--- glimmer-2.10.30/po/kk.po
++++ glimmer-2.10.30/po/kk.po
+@@ -18,11 +18,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Poedit 2.3.1\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/km.po b/glimmer-2.10.30/po/km.po
+--- glimmer-2.10.30/po/km.po
++++ glimmer-2.10.30/po/km.po
+@@ -17,10 +17,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: KBabel 1.11.4\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "កម្មវិធី​រៀបចំ​រូបភាពរបស់ GNU"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "កម្មវិធី​និពន្ធ​រូបភាព"
+diff -u a/glimmer-2.10.30/po/kn.po b/glimmer-2.10.30/po/kn.po
+--- glimmer-2.10.30/po/kn.po
++++ glimmer-2.10.30/po/kn.po
+@@ -18,10 +18,6 @@
+ "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+ "X-Generator: KBabel 1.11.4\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU ಇಮೇಜ್ ಮ್ಯಾನಿಪುಲೇಶನ್ ಪ್ರೊಗ್ರಾಮ್"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "ಚಿತ್ರ ಸಂಪಾದಕ"
+diff -u a/glimmer-2.10.30/po/ko.po b/glimmer-2.10.30/po/ko.po
+--- glimmer-2.10.30/po/ko.po
++++ glimmer-2.10.30/po/ko.po
+@@ -22,11 +22,6 @@
+ "X-Poedit-SourceCharset: utf-8\n"
+ "X-Generator: Poedit 2.1.1\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "그누 이미지 처리 프로그램"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ky.po b/glimmer-2.10.30/po/ky.po
+--- glimmer-2.10.30/po/ky.po
++++ glimmer-2.10.30/po/ky.po
+@@ -23,10 +23,6 @@
+ msgid "Glimmer"
+ msgstr "Glimmer"
+ 
+-#: ../app/about.h:26 ../desktop/glimmer.desktop.in.in.h:1
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #. The year of the last commit (UTC) will be inserted into this string.
+ #: ../app/about.h:30
+ #, c-format
+diff -u a/glimmer-2.10.30/po/lt.po b/glimmer-2.10.30/po/lt.po
+--- glimmer-2.10.30/po/lt.po
++++ glimmer-2.10.30/po/lt.po
+@@ -26,11 +26,6 @@
+ "X-Project-Style: gnome\n"
+ "X-Poedit-SourceCharset: UTF-8\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU paveikslėlių manipuliavimo programa"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/lv.po b/glimmer-2.10.30/po/lv.po
+--- glimmer-2.10.30/po/lv.po
++++ glimmer-2.10.30/po/lv.po
+@@ -24,11 +24,6 @@
+ " 2);\n"
+ "X-Generator: Lokalize 21.08.1\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU attēlu apstrādes programma"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+Only in a/glimmer-2.10.30/po: Makefile
+Only in a/glimmer-2.10.30/po: Makefile.in
+diff -u a/glimmer-2.10.30/po/mk.po b/glimmer-2.10.30/po/mk.po
+--- glimmer-2.10.30/po/mk.po
++++ glimmer-2.10.30/po/mk.po
+@@ -30,10 +30,6 @@
+ "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+ "X-Generator: Lokalize 0.2\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "ГНУ програма за манипулација со слики"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Уредник за слики"
+diff -u a/glimmer-2.10.30/po/ml.po b/glimmer-2.10.30/po/ml.po
+--- glimmer-2.10.30/po/ml.po
++++ glimmer-2.10.30/po/ml.po
+@@ -17,10 +17,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr ""
+diff -u a/glimmer-2.10.30/po/mr.po b/glimmer-2.10.30/po/mr.po
+--- glimmer-2.10.30/po/mr.po
++++ glimmer-2.10.30/po/mr.po
+@@ -20,11 +20,6 @@
+ "product=glimmer&keywords=I18N+L10N&component=Internationalisation\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "ग्नू इमेज मॅनिप्युलेशन प्रोग्राम"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ms.po b/glimmer-2.10.30/po/ms.po
+--- glimmer-2.10.30/po/ms.po
++++ glimmer-2.10.30/po/ms.po
+@@ -16,10 +16,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ #, fuzzy
+ msgid "Image Editor"
+diff -u a/glimmer-2.10.30/po/my.po b/glimmer-2.10.30/po/my.po
+--- glimmer-2.10.30/po/my.po
++++ glimmer-2.10.30/po/my.po
+@@ -19,10 +19,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Lokalize 1.0\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU ရုပ်ပုံ စီမံကိုင်တွယ်ရေး ပရိုဂရမ်"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "ရုပ်ပုံ တည်းဖြတ်ကိရိယာ"
+diff -u a/glimmer-2.10.30/po/nb.po b/glimmer-2.10.30/po/nb.po
+--- glimmer-2.10.30/po/nb.po
++++ glimmer-2.10.30/po/nb.po
+@@ -18,10 +18,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU bildebehandlingsprogram"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Bildebehandler"
+diff -u a/glimmer-2.10.30/po/nds.po b/glimmer-2.10.30/po/nds.po
+--- glimmer-2.10.30/po/nds.po
++++ glimmer-2.10.30/po/nds.po
+@@ -17,10 +17,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "plural-Forms: nplurals=2; plural=(n!=1);\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU Billbewarkenprogramm"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Billbewarker"
+diff -u a/glimmer-2.10.30/po/ne.po b/glimmer-2.10.30/po/ne.po
+--- glimmer-2.10.30/po/ne.po
++++ glimmer-2.10.30/po/ne.po
+@@ -28,10 +28,6 @@
+ "X-Generator: Poedit 2.0.3\n"
+ "Plural-Forms: nplurals=2;plural=(n!=1);\n"
+ 
+-#: ../desktop/glimmer.appdata.xml.in.h:1 ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "जी एन यू छवि परिचालन कार्यक्रम"
+-
+ #: ../desktop/glimmer.appdata.xml.in.h:2 ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+ msgstr "छवि सिर्जना गर्नुहोस् र फोटोग्राफ सम्पादन गर्नुहोस्"
+diff -u a/glimmer-2.10.30/po/nl.po b/glimmer-2.10.30/po/nl.po
+--- glimmer-2.10.30/po/nl.po
++++ glimmer-2.10.30/po/nl.po
+@@ -40,14 +40,6 @@
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ "X-Generator: Poedit 3.0\n"
+ 
+-# Waarom niet: beeldbewerkingsprogramma of beeldmanipulatieprogramma? - Hannie
+-# Omdat het de naam van het programma is?
+-# --pm
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/nn.po b/glimmer-2.10.30/po/nn.po
+--- glimmer-2.10.30/po/nn.po
++++ glimmer-2.10.30/po/nn.po
+@@ -18,11 +18,6 @@
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ "X-Generator: Poedit 1.8.3\n"
+ 
+-#: ../desktop/glimmer.appdata.xml.in.h:1 ../desktop/glimmer.desktop.in.in.h:1
+-#: ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU bilethandteringsprogram"
+-
+ #: ../desktop/glimmer.appdata.xml.in.h:2 ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+ msgstr "Lag teikningar eller rediger foto"
+diff -u a/glimmer-2.10.30/po/oc.po b/glimmer-2.10.30/po/oc.po
+--- glimmer-2.10.30/po/oc.po
++++ glimmer-2.10.30/po/oc.po
+@@ -29,10 +29,6 @@
+ msgid "Glimmer"
+ msgstr "Glimmer"
+ 
+-#: ../app/about.h:26 ../desktop/glimmer.desktop.in.in.h:1
+-msgid "Glimmer"
+-msgstr "Editor d'imatge Glimmer"
+-
+ #. The year of the last commit (UTC) will be inserted into this string.
+ #: ../app/about.h:30
+ #, c-format
+diff -u a/glimmer-2.10.30/po/pa.po b/glimmer-2.10.30/po/pa.po
+--- glimmer-2.10.30/po/pa.po
++++ glimmer-2.10.30/po/pa.po
+@@ -21,11 +21,6 @@
+ "X-Generator: Lokalize 2.0\n"
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ 
+-#: ../desktop/glimmer.appdata.xml.in.h:1 ../desktop/glimmer.desktop.in.in.h:1
+-#: ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "ਗਨੂ ਈਮੇਜ਼ ਮੈਨੂਪਲੇਸ਼ਨ ਪਰੋਗਰਾਮ"
+-
+ #: ../desktop/glimmer.appdata.xml.in.h:2 ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+ msgstr "ਚਿੱਤਰ ਬਣਾਓ ਅਤੇ ਤਸਵੀਰਾਂ ਸੋਧੋ"
+diff -u a/glimmer-2.10.30/po/pl.po b/glimmer-2.10.30/po/pl.po
+--- glimmer-2.10.30/po/pl.po
++++ glimmer-2.10.30/po/pl.po
+@@ -34,11 +34,6 @@
+ "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+ "|| n%100>=20) ? 1 : 2);\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Edytor obrazów Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+Only in a/glimmer-2.10.30/po: POTFILES
+diff -u a/glimmer-2.10.30/po/pt_BR.po b/glimmer-2.10.30/po/pt_BR.po
+--- glimmer-2.10.30/po/pt_BR.po
++++ glimmer-2.10.30/po/pt_BR.po
+@@ -30,11 +30,6 @@
+ "Plural-Forms: nplurals=2; plural=(n > 1)\n"
+ "X-Generator: Gtranslator 3.32.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de manipulação de imagem do GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/pt.po b/glimmer-2.10.30/po/pt.po
+--- glimmer-2.10.30/po/pt.po
++++ glimmer-2.10.30/po/pt.po
+@@ -25,11 +25,6 @@
+ "X-Source-Language: C\n"
+ "X-Project-Style: gnome\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Programa de Manipulação de Imagens GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ro.po b/glimmer-2.10.30/po/ro.po
+--- glimmer-2.10.30/po/ro.po
++++ glimmer-2.10.30/po/ro.po
+@@ -21,12 +21,6 @@
+ "20)) ? 1 : 2);\n"
+ "X-Generator: Poedit 2.4.1\n"
+ 
+-# conform discuției de aici http://groups.google.com/group/diacritice/browse_thread/thread/84f8ecfd7b693426
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ru.po b/glimmer-2.10.30/po/ru.po
+--- glimmer-2.10.30/po/ru.po
++++ glimmer-2.10.30/po/ru.po
+@@ -24,11 +24,6 @@
+ "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+ "X-Generator: Gtranslator 40.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/rw.po b/glimmer-2.10.30/po/rw.po
+--- glimmer-2.10.30/po/rw.po
++++ glimmer-2.10.30/po/rw.po
+@@ -24,10 +24,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr ""
+diff -u a/glimmer-2.10.30/po/si.po b/glimmer-2.10.30/po/si.po
+--- glimmer-2.10.30/po/si.po
++++ glimmer-2.10.30/po/si.po
+@@ -17,10 +17,6 @@
+ "Plural-Forms: nplurals=2; plural=n != 1;\n"
+ "X-Generator: Lokalize 0.3\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr ""
+diff -u a/glimmer-2.10.30/po/sk.po b/glimmer-2.10.30/po/sk.po
+--- glimmer-2.10.30/po/sk.po
++++ glimmer-2.10.30/po/sk.po
+@@ -24,11 +24,6 @@
+ "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+ "X-Generator: Poedit 2.4.1\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU program na manipuláciu s obrázkami"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/sl.po b/glimmer-2.10.30/po/sl.po
+--- glimmer-2.10.30/po/sl.po
++++ glimmer-2.10.30/po/sl.po
+@@ -23,11 +23,6 @@
+ "X-Poedit-SourceCharset: UTF-8\n"
+ "X-Generator: Poedit 3.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer – program GNU za obdelavo slik"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/sr@latin.po b/glimmer-2.10.30/po/sr@latin.po
+--- glimmer-2.10.30/po/sr@latin.po
++++ glimmer-2.10.30/po/sr@latin.po
+@@ -25,11 +25,6 @@
+ "X-Project-Style: gnome\n"
+ "X-Generator: Gtranslator 3.38.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Gnuov program za obradu slika"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/sr.po b/glimmer-2.10.30/po/sr.po
+--- glimmer-2.10.30/po/sr.po
++++ glimmer-2.10.30/po/sr.po
+@@ -25,11 +25,6 @@
+ "X-Project-Style: gnome\n"
+ "X-Generator: Gtranslator 3.38.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Гнуов програм за обраду слика"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+Only in a/glimmer-2.10.30/po: stamp-it
+diff -u a/glimmer-2.10.30/po/sv.po b/glimmer-2.10.30/po/sv.po
+--- glimmer-2.10.30/po/sv.po
++++ glimmer-2.10.30/po/sv.po
+@@ -24,11 +24,6 @@
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ "X-Generator: Poedit 3.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU:s bildmanipuleringsprogram"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/ta.po b/glimmer-2.10.30/po/ta.po
+--- glimmer-2.10.30/po/ta.po
++++ glimmer-2.10.30/po/ta.po
+@@ -20,10 +20,6 @@
+ "Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
+ "X-Generator: Lokalize 1.1\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "க்னூ பட கையாளல் நிரல்"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "பிம்ப திருத்தி"
+diff -u a/glimmer-2.10.30/po/te.po b/glimmer-2.10.30/po/te.po
+--- glimmer-2.10.30/po/te.po
++++ glimmer-2.10.30/po/te.po
+@@ -23,11 +23,6 @@
+ "X-Poedit-Country: INDIA\n"
+ "X-Poedit-SourceCharset: utf-8\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1
+-#: ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "గ్నూ ఇమేజ్ మానిప్యులేషన్ ప్రోగ్రామ్"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "బొమ్మ కూర్పకము"
+diff -u a/glimmer-2.10.30/po/th.po b/glimmer-2.10.30/po/th.po
+--- glimmer-2.10.30/po/th.po
++++ glimmer-2.10.30/po/th.po
+@@ -21,10 +21,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "เครื่องมือแก้ไขภาพ"
+diff -u a/glimmer-2.10.30/po/tr.po b/glimmer-2.10.30/po/tr.po
+--- glimmer-2.10.30/po/tr.po
++++ glimmer-2.10.30/po/tr.po
+@@ -57,11 +57,6 @@
+ "X-POOTLE-MTIME: 1437505389.000000\n"
+ "X-Poedit-SourceCharset: UTF-8\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU Görüntü İşleme Programı"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/tt.po b/glimmer-2.10.30/po/tt.po
+--- glimmer-2.10.30/po/tt.po
++++ glimmer-2.10.30/po/tt.po
+@@ -15,10 +15,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Sürät Eşkärtüçe GNU-Yasılım"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "Sürät Tözätkeç"
+diff -u a/glimmer-2.10.30/po/uk.po b/glimmer-2.10.30/po/uk.po
+--- glimmer-2.10.30/po/uk.po
++++ glimmer-2.10.30/po/uk.po
+@@ -20,11 +20,6 @@
+ "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+ "X-Generator: Lokalize 20.12.0\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Glimmer"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/vi.po b/glimmer-2.10.30/po/vi.po
+--- glimmer-2.10.30/po/vi.po
++++ glimmer-2.10.30/po/vi.po
+@@ -21,11 +21,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Gtranslator 2.91.7\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "Chương Trình Xử Lý Ảnh GNU"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/xh.po b/glimmer-2.10.30/po/xh.po
+--- glimmer-2.10.30/po/xh.po
++++ glimmer-2.10.30/po/xh.po
+@@ -17,10 +17,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "UmHleli woMfanekiso"
+diff -u a/glimmer-2.10.30/po/yi.po b/glimmer-2.10.30/po/yi.po
+--- glimmer-2.10.30/po/yi.po
++++ glimmer-2.10.30/po/yi.po
+@@ -15,10 +15,6 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr ""
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ #, fuzzy
+ msgid "Image Editor"
+diff -u a/glimmer-2.10.30/po/zh_CN.po b/glimmer-2.10.30/po/zh_CN.po
+--- glimmer-2.10.30/po/zh_CN.po
++++ glimmer-2.10.30/po/zh_CN.po
+@@ -33,11 +33,6 @@
+ "Plural-Forms: nplurals=1; plural=0;\n"
+ "X-Generator: Poedit 2.4.3\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU 图像处理程序"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
+diff -u a/glimmer-2.10.30/po/zh_HK.po b/glimmer-2.10.30/po/zh_HK.po
+--- glimmer-2.10.30/po/zh_HK.po
++++ glimmer-2.10.30/po/zh_HK.po
+@@ -20,10 +20,6 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU 圖片處理程式"
+-
+ #: ../desktop/glimmer.desktop.in.in.h:2
+ msgid "Image Editor"
+ msgstr "圖片編輯器"
+diff -u a/glimmer-2.10.30/po/zh_TW.po b/glimmer-2.10.30/po/zh_TW.po
+--- glimmer-2.10.30/po/zh_TW.po
++++ glimmer-2.10.30/po/zh_TW.po
+@@ -21,11 +21,6 @@
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ "X-Generator: Poedit 2.2.4\n"
+ 
+-#: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:1
+-#: ../desktop/glimmer.desktop.in.in.h:1 ../app/about.h:26
+-msgid "Glimmer"
+-msgstr "GNU 影像處理程式"
+-
+ #: ../desktop/org.glimmer.Glimmer.appdata.xml.in.in.h:2
+ #: ../desktop/glimmer.desktop.in.in.h:3
+ msgid "Create images and edit photographs"
