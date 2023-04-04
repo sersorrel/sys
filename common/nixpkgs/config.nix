@@ -4,6 +4,7 @@
   allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
     "clion"
     "discord"
+    "discord-ptb"
     "ffmpeg-full"
     "google-chrome"
     "obsidian"
