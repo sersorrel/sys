@@ -16,5 +16,8 @@
         pkgs.xfce.thunar-media-tags-plugin
       ];
     };
+    environment.systemPackages = [
+      pkgs.xfce.exo
+    ];
   };
 }

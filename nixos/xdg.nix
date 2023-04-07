@@ -14,5 +14,8 @@
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
       xdgOpenUsePortal = true;
     };
+    environment.systemPackages = [
+      pkgs.glib
+    ];
   };
 }
