@@ -9,9 +9,6 @@
     };
   };
   config = lib.mkIf config.sys.kdeconnect.enable {
-    services.kdeconnect = {
-      enable = true;
-      indicator = true;
-    };
+    services.kdeconnect.enable = true;
   };
 }
