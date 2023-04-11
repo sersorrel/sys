@@ -10,8 +10,11 @@
       };
     };
   };
-  config = lib.mkIf config.sys.launchpad.autoPowerManagement {
-    powerManagement = {
+  config = {
+    services.udev.extraRules = ''
+      SUBSYSTEM=="sound", ENV{ID_MODEL}=="Launchpad_Mini_MK3", ENV{SYSTEMD_USER_WANTS}+="launchpad-daemon.service"
+    '';
+    powerManagement = lib.mkIf config.sys.launchpad.autoPowerManagement {
       powerDownCommands = ''
         launchpad_port=$(${pkgs.alsa-utils}/bin/amidi -l | ${pkgs.gawk}/bin/awk '/Launchpad Mini MK3 LPMiniMK3 MI/ { print $2 }')
         test -n "$launchpad_port" && ${pkgs.alsa-utils}/bin/amidi -p "$launchpad_port" -S "F000 20 29 02 0D 09 00 F7"
