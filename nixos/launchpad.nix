@@ -12,8 +12,19 @@
   };
   config = {
     services.udev.extraRules = ''
-      SUBSYSTEM=="sound", ENV{ID_MODEL}=="Launchpad_Mini_MK3", ENV{SYSTEMD_USER_WANTS}+="launchpad-daemon.service"
+      SUBSYSTEM=="sound", ENV{ID_MODEL}=="Launchpad_Mini_MK3", ENV{SYSTEMD_WANTS}+="launchpad.service", ENV{SYSTEMD_USER_WANTS}+="launchpad-daemon.service"
     '';
+    systemd.services.launchpad = {
+      description = "Novation Launchpad plugged status (not a real service)";
+      unitConfig = {
+        StopWhenUnneeded = true;
+      };
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.coreutils}/bin/true";
+        RemainAfterExit = true;
+      };
+    };
     powerManagement = lib.mkIf config.sys.launchpad.autoPowerManagement {
       powerDownCommands = ''
         launchpad_port=$(${pkgs.alsa-utils}/bin/amidi -l | ${pkgs.gawk}/bin/awk '/Launchpad Mini MK3 LPMiniMK3 MI/ { print $2 }')
