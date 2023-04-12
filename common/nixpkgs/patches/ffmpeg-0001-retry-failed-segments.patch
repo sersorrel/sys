@@ -1,0 +1,40 @@
+From 84e3ee69e25081be1a830331796c2ce6e687f70b Mon Sep 17 00:00:00 2001
+From: Seth Wright <seth.wright@fireeye.com>
+Date: Sun, 21 Feb 2021 18:48:16 +0000
+Subject: [PATCH] Retry failed segments
+
+https://old.reddit.com/r/ffmpeg/comments/mu4vjm/how_to_have_ffmpeg_retry_a_failed_downloaded/hgmhwp8/
+
+---
+ libavformat/hls.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/libavformat/hls.c b/libavformat/hls.c
+index 31d7f5526a..408a4397a8 100644
+--- a/libavformat/hls.c
++++ b/libavformat/hls.c
+@@ -1396,6 +1396,7 @@ static int read_data(void *opaque, uint8_t *buf, int buf_size)
+     int ret;
+     int just_opened = 0;
+     int reload_count = 0;
++    int segment_retries = 0;
+     struct segment *seg;
+
+ restart:
+@@ -1487,9 +1488,13 @@ reload:
+             av_log(v->parent, AV_LOG_WARNING, "Failed to open segment %d of playlist %d\n",
+                    v->cur_seq_no,
+                    v->index);
+-            v->cur_seq_no += 1;
++            if (segment_retries > 5)
++                return AVERROR_EXIT;
++            segment_retries += 1;
++            //v->cur_seq_no += 1;
+             goto reload;
+         }
++        segment_retries = 0;
+         just_opened = 1;
+     }
+
+-- 
+2.28.0
