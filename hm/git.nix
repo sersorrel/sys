@@ -138,6 +138,7 @@
         rebase = {
           autoSquash = true;
           missingCommitsCheck = "error";
+          rescheduleFailedExec = true;
         };
         sendemail = {
           annotate = true;
