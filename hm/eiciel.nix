@@ -10,6 +10,5 @@
   };
   config = lib.mkIf config.sys.eiciel.enable {
     home.packages = [ pkgs.eiciel ];
-    programs.i3.extraConfig = [ ''for_window [class="^eiciel$"] floating enable'' ];
   };
 }

@@ -10,6 +10,5 @@
   };
   config = lib.mkIf config.sys.keepassxc.enable {
     home.packages = [ pkgs.keepassxc ];
-    programs.i3.extraConfig = [ ''assign [class="^KeePassXC$" title="^(?!Auto-Type - KeePassXC$)"] workspace number 4'' ];
   };
 }
