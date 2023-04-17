@@ -30,6 +30,9 @@
     " ctrl-w in normal mode closes the tab
     nnoremap <c-w> :tabclose<CR>
 
+    " enable matchit.vim emulation
+    set matchit
+
     " stuff from init.nvim
 
     " Ignore case in searches.
