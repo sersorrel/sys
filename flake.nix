@@ -21,6 +21,7 @@
     nixosModules.default = { lib, ... }: {
       _module.args.sysDir = ./.;
       imports = inputs.self.lib.importDir ./nixos;
+      boot.cleanTmpDir = true;
       environment.shellAliases = {
         l = null;
         ll = null;
