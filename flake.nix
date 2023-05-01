@@ -5,6 +5,13 @@
 
   };
 
+  # TODO: remove this once Obsidian 1.2 is released
+  nixConfig = {
+    permittedInsecurePackages = [
+      "electron-21.4.0"
+    ];
+  };
+
   outputs = inputs: {
 
     darwinModules.default = { ... }: {

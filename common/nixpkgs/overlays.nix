@@ -48,18 +48,6 @@ in
       };
     });
     i3status-rust = super.i3status-rust.overrideAttrs (old: rec {
-      # TODO: remove version override after next release https://github.com/greshake/i3status-rust/issues/1848
-      version = assert builtins.compareVersions super.i3status-rust.version "0.30.5" != 1; "unstable-2023-03-29";
-      src = super.fetchFromGitHub {
-        owner = "greshake";
-        repo = "i3status-rust";
-        rev = "7f033f78905b3e3bc43ffdaae3c3bdb62226737c";
-        sha256 = "sha256-zl5hh0M/OnNnTpo+1P9W0BvZcjTVMHBTQQAvNTkN/m4=";
-      };
-      cargoDeps = old.cargoDeps.overrideAttrs (old': {
-        inherit src;
-        outputHash = "sha256-lpH4rd/Yj1vQsGG1FI+S3oUDOPLrH/TLrN+D2YHUEdg=";
-      });
       patches = (old.patches or []) ++ [
         (localPath ./patches/i3status-rust-0001-uptime-warning.patch)
         (localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch)
