@@ -141,5 +141,9 @@ in
         '';
       };
     });
+    input-leap = assert !(super ? input-leap); super.libsForQt5.callPackage (super.fetchurl {
+      url = "https://raw.githubusercontent.com/NixOS/nixpkgs/25eb81ccff4fd35d999ea0d0c196646be496255b/pkgs/applications/misc/input-leap/default.nix"; # https://github.com/NixOS/nixpkgs/pull/216003
+      sha256 = "sha256-ROP+/aEYEyUDWZPJXazZWnaBG3aa5Cfhd9bxiOroX8o=";
+    }) {};
   })
 ]
