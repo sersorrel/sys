@@ -21,6 +21,6 @@
     "zoom"
   ];
   permittedInsecurePackages = [
-    (assert builtins.compareVersions pkgs.obsidian.version "1.2" == -1; "electron-21.4.0") # remember to remove this from flake.nix nixConfig too!
+    (assert builtins.compareVersions pkgs.todoist-electron.version "1.1.2" == -1; "electron-21.4.0") # remember to remove this from flake.nix nixConfig too!
   ];
 }
