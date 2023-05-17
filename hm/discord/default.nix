@@ -19,6 +19,6 @@ in
     };
   };
   config = lib.mkIf config.sys.discord.enable {
-    home.packages = [ pkgs.discord-ptb krisp-patcher ];
+    home.packages = [ pkgs.discord krisp-patcher ];
   };
 }
