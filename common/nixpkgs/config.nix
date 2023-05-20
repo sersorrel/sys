@@ -2,6 +2,7 @@
 
 {
   allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+    "android-studio-stable"
     "clion"
     "discord"
     "discord-ptb"
