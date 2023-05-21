@@ -363,7 +363,6 @@
     };
     home.packages = with pkgs; [
       rnix-lsp
-      unstable.rust-analyzer
     ];
   });
 }
