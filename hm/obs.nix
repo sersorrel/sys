@@ -26,7 +26,14 @@ in
     };
   };
   config = lib.mkIf config.sys.obs.enable {
-    home.packages = [ pkgs.obs-studio ];
+    home.packages = [
+      (pkgs.wrapOBS {
+        plugins = [
+          pkgs.obs-studio-plugins.obs-backgroundremoval
+          pkgs.obs-studio-plugins.obs-pipewire-audio-capture
+        ];
+      })
+    ];
     home.activation.obsFtl = lib.hm.dag.entryAfter ["writeBoundary"] ''
     $DRY_RUN_CMD ${pkgs.jq}/bin/jq '.services |= (map(select(.name != "FTL")) | . += [{"name": "FTL", "common": true, "servers": ${builtins.toJSON config.sys.obs.ftl-servers}, "recommended": {"keyint": 2,"output": "ftl_output", "bframes": 0}}])' ${ftl-config-file} | ${pkgs.moreutils}/bin/sponge ${ftl-config-file}
   '';
