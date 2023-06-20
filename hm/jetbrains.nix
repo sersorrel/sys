@@ -27,6 +27,9 @@
     " ]g/[g navigate around diagnostics
     nnoremap ]g :action GotoNextError<CR>
     nnoremap [g :action GotoPreviousError<CR>
+    " ]h/[h navigate around changes
+    nnoremap ]h :action VcsShowNextChangeMarker<CR>
+    nnoremap [h :action VcsShowPrevChangeMarker<CR>
     " ctrl-w in normal mode closes the tab
     nnoremap <c-w> :tabclose<CR>
 
