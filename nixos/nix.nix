@@ -35,7 +35,7 @@ in
     ''}" ];
   };
   systemd.tmpfiles.rules = lib.mapAttrsToList (name: value: "L+ ${value} - - - - ${inputs.${name}}") channelPaths;
-  systemd.services.nix-daemon.serviceConfig.Nice = 20;
+  systemd.services.nix-daemon.serviceConfig.Nice = 10;
   nixpkgs.config = import (sysDir + "/common/nixpkgs/config.nix");
   nixpkgs.overlays = import (sysDir + "/common/nixpkgs/overlays.nix") { inherit unstable; here = sysDir + "/common/nixpkgs"; };
 }
