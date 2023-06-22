@@ -60,6 +60,10 @@
           highlight = "#ec008c";
           timeout = 0;
         };
+        z-todoist = {
+          appname = "Todoist";
+          timeout = 0;
+        };
       };
     };
   };
