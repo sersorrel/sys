@@ -4,6 +4,7 @@
   allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
     "android-studio-stable"
     "clion"
+    "dataspell"
     "discord"
     "discord-ptb"
     "ffmpeg-full"
