@@ -5,7 +5,7 @@
     sys.joystickwake.enable = lib.mkOption {
       description = "Whether to enable joystickwake, a daemon to keep the screen awake when using a game controller.";
       type = lib.types.bool;
-      default = true;
+      default = pkgs.stdenv.isLinux;
     };
   };
   config = lib.mkIf config.sys.joystickwake.enable {
