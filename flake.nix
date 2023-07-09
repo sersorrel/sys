@@ -15,6 +15,7 @@
   outputs = inputs: {
 
     darwinModules.default = { ... }: {
+      imports = inputs.self.lib.importDir ./darwin;
       _module.args.sysDir = ./.;
     };
 
