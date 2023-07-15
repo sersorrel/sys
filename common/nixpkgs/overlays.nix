@@ -141,6 +141,5 @@ in
         '';
       };
     });
-    fusee-nano = assert !(super ? fusee-nano); super.callPackage (localPath ./programs/fusee-nano.nix) {};
   })
 ]
