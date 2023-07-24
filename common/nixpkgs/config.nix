@@ -2,6 +2,7 @@
 
 {
   allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+    "android-sdk-tools"
     "android-studio-stable"
     "clion"
     "dataspell"
