@@ -35,6 +35,7 @@
         ll = null;
         ls = null;
       };
+      systemd.network.wait-online.anyInterface = true;
       users.mutableUsers = false;
     };
 
