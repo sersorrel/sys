@@ -1,0 +1,53 @@
+--- b/Cargo.lock
++++ a/Cargo.lock
+@@ -279,9 +279,9 @@
+ 
+ [[package]]
+ name = "term_grid"
++version = "0.1.7"
+-version = "0.2.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "230d3e804faaed5a39b08319efb797783df2fd9671b39b7596490cb486d702cf"
+-checksum = "a7c9eb7705cb3f0fd71d3955b23db6d372142ac139e8c473952c93bf3c3dc4b7"
+ dependencies = [
+  "unicode-width",
+ ]
+--- b/Cargo.toml
++++ a/Cargo.toml
+@@ -27,7 +27,7 @@
+ num_cpus = "1.10"
+ number_prefix = "0.4"
+ scoped_threadpool = "0.1"
++term_grid = "0.1"
+-term_grid = "0.2.0"
+ terminal_size = "0.1.16"
+ unicode-width = "0.1"
+ users = "0.11"
+--- b/src/output/grid.rs
++++ a/src/output/grid.rs
+@@ -46,7 +46,6 @@
+             grid.add(tg::Cell {
+                 contents:  filename.strings().to_string(),
+                 width:     *filename.width(),
+-                alignment: tg::Alignment::Left,
+             });
+         }
+ 
+--- b/src/output/grid_details.rs
++++ a/src/output/grid_details.rs
+@@ -263,7 +263,6 @@
+                         let cell = grid::Cell {
+                             contents: ANSIStrings(&column[row].contents).to_string(),
+                             width:    *column[row].width,
+-                            alignment: grid::Alignment::Left,
+                         };
+ 
+                         grid.add(cell);
+@@ -277,7 +276,6 @@
+                     let cell = grid::Cell {
+                         contents: ANSIStrings(&cell.contents).to_string(),
+                         width:    *cell.width,
+-                        alignment: grid::Alignment::Left,
+                     };
+ 
+                     grid.add(cell);

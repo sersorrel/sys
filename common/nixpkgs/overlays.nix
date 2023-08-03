@@ -29,6 +29,23 @@ in
         (localPath ./patches/direnv-0001-reduce-verbosity.patch)
       ];
     });
+    exa = if super.exa.version == "0.10.1" then super.exa else super.exa.overrideAttrs (old: {
+      # https://github.com/ogham/exa/issues/1198, https://github.com/NixOS/nixpkgs/pull/240490
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/exa-0001-fix-grid-by-reverting-af208285.patch)
+      ];
+      # we want to just be able to do this:
+      #   cargoPatches = (old.cargoPatches or []) ++ [
+      #     (localPath ./patches/exa-0001-fix-grid-by-reverting-af208285.patch)
+      #   ];
+      # but we can't: https://discourse.nixos.org/t/is-it-possible-to-override-cargosha256-in-buildrustpackage/4393
+      cargoDeps = old.cargoDeps.overrideAttrs (old': {
+        outputHash = "sha256-0RGeSdRwMGvUn5tNArkWZSS+OpXnK1bFYuvZ8+zeZtc=";
+        patches = (old'.patches or []) ++ [
+          (localPath ./patches/exa-0001-fix-grid-by-reverting-af208285.patch)
+        ];
+      });
+    });
     ffmpeg = super.ffmpeg.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/ffmpeg-0001-retry-failed-segments.patch)
