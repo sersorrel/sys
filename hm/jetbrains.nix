@@ -5,7 +5,10 @@
 
     " Show a few lines of context around the cursor. Note that this makes the
     " text scroll if you mouse-click near the start or end of the window.
-    set scrolloff=4
+    " This causes severe issues in DataSpell, so disable it there (VIM-2501).
+    if &ide !~? "dataspell"
+      set scrolloff=4
+    endif
 
     " Do incremental searching.
     set incsearch
