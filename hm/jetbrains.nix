@@ -35,6 +35,8 @@
     nnoremap [h :action VcsShowPrevChangeMarker<CR>
     " ctrl-w in normal mode closes the tab
     nnoremap <c-w> :tabclose<CR>
+    " support wrapping selected text (VIM-186, VIM-1310)
+    xnoremap gq :action com.andrewbrookins.idea.wrap.WrapAction<CR>
 
     " enable matchit.vim emulation
     set matchit
