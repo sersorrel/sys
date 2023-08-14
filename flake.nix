@@ -29,6 +29,8 @@
     nixosModules.default = { lib, ... }: {
       _module.args.sysDir = ./.;
       imports = inputs.self.lib.importDir ./nixos;
+      boot.loader.grub.configurationLimit = 30;
+      boot.loader.systemd-boot.configurationLimit = 30;
       boot.tmp.cleanOnBoot = true;
       environment.shellAliases = {
         l = null;
