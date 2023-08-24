@@ -35,7 +35,7 @@ in
       })
     ];
     home.activation.obsFtl = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    $DRY_RUN_CMD ${pkgs.jq}/bin/jq '.services |= (map(select(.name != "FTL")) | . += [{"name": "FTL", "common": true, "servers": ${builtins.toJSON config.sys.obs.ftl-servers}, "recommended": {"keyint": 2,"output": "ftl_output", "bframes": 0}}])' ${ftl-config-file} | ${pkgs.moreutils}/bin/sponge ${ftl-config-file}
+    $DRY_RUN_CMD ${pkgs.jq}/bin/jq '.services |= (map(select(.name != "FTL")) | . += [{"name": "FTL", "common": true, "protocol": "FTL", "servers": ${builtins.toJSON config.sys.obs.ftl-servers}, "recommended": {"keyint": 2,"output": "ftl_output", "bframes": 0}}])' ${ftl-config-file} | ${pkgs.moreutils}/bin/sponge ${ftl-config-file}
   '';
   };
 }
