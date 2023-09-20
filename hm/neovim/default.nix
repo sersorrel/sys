@@ -18,24 +18,6 @@
         sha256 = "0340zc8a6867xh57rv6pckpq91kfky7qixpi1q4y2ahhcnfwb63f";
       };
     };
-    leap = pkgs.vimUtils.buildVimPlugin {
-      name = "leap.nvim";
-      src = pkgs.fetchFromGitHub {
-        owner = "ggandor";
-        repo = "leap.nvim";
-        rev = "cd90202232806ec2dab9c76c7287bd2190a17459";
-        sha256 = "0fk686d4hs7ld4a85gfhqmd4nk9f951bjjhkknbkkq0rijdrpysa";
-      };
-    };
-    leap-spooky = pkgs.vimUtils.buildVimPlugin {
-      name = "leap-spooky.nvim";
-      src = pkgs.fetchFromGitHub {
-        owner = "ggandor";
-        repo = "leap-spooky.nvim";
-        rev = "748b2614e859704d8004e86be97401c9f3e28e80";
-        sha256 = "0rhpmxv59s6449k3g2qap55lpnlf3z8vm2vml172ygzfw0l0ilkr";
-      };
-    };
     vim-angry = pkgs.vimUtils.buildVimPlugin {
       name = "vim-angry";
       src = pkgs.fetchFromGitHub {
@@ -239,22 +221,6 @@
             let g:ctrlp_custom_ignore = '\v\.(aux|fdb_latexmk|fls|mypy_cache)$'
             " Do show hidden files (when ctrlp_user_command doesn't apply).
             let g:ctrlp_show_hidden = 1
-          '';
-        }
-        {
-          plugin = leap;
-          config = ''
-            lua <<EOF
-            require'leap'.add_default_mappings()
-            EOF
-          '';
-        }
-        {
-          plugin = leap-spooky;
-          config = ''
-            lua <<EOF
-            require'leap-spooky'.setup{}
-            EOF
           '';
         }
         {
