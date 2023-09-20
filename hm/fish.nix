@@ -90,12 +90,12 @@
           body = "command less -N $argv";
         };
         ll = {
-          wraps = "exa";
+          wraps = "eza";
           body = "ls -al $argv";
         };
         ls = {
-          wraps = "exa";
-          body = "exa --group -F $argv"; # TODO: only set this if exa is installed
+          wraps = "eza";
+          body = "eza --group -F $argv"; # TODO: only set this if eza is installed
         };
         lsof = {
           wraps = "lsof";
