@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = {
@@ -9,6 +9,6 @@
     };
   };
   config = lib.mkIf config.sys.autorandr.enable {
-    services.autorandr.enable = true;
+    environment.systemPackages = [ pkgs.autorandr ];
   };
 }
