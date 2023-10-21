@@ -108,6 +108,7 @@
           wsErrorHighlight = "all";
           submodule = "log";
           colorMoved = true;
+          colorMovedWS = "allow-indentation-change";
         };
         fetch = {
           prune = true;
