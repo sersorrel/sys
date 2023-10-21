@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = {
@@ -19,6 +19,7 @@
     };
   };
   config = lib.mkIf config.sys.git.enable {
+    home.packages = [ pkgs.tig ];
     sys.gpg.enable = lib.mkDefault true; # `git log` prints warning messages on signed commits otherwise
     xdg.configFile."git/message".text = "\n";
     programs.git = {
@@ -153,6 +154,19 @@
         };
         tag = {
           sort = "version:refname";
+        };
+        tig = {
+          # some vaguely nice-looking colours, since the defaults suck and it doesn't support truecolour
+          color = {
+            cursor = "default default underline";
+            status = "default 250";
+            title-focus = "default 250";
+            title-blur = "default 254";
+            id = "yellow default";
+            date = "green default";
+            author = "blue default";
+            main-remote = "red default";
+          };
         };
         versionsort = {
           suffix = builtins.concatMap (v: [v ("-" + v)]) [
