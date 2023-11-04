@@ -29,11 +29,6 @@ in
         (localPath ./patches/direnv-0001-reduce-verbosity.patch)
       ];
     });
-    ffmpeg = super.ffmpeg.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-        (localPath ./patches/ffmpeg-0001-retry-failed-segments.patch)
-      ];
-    });
     i3 = super.i3.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/i3-0001-i3bar-border.patch)
