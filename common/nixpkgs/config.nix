@@ -12,6 +12,7 @@
     "google-chrome"
     "obsidian"
     "rider"
+    "rust-rover"
     "slack"
     "steam"
     "steam-original"
