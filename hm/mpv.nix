@@ -12,7 +12,7 @@
     programs.mpv = {
       enable = true;
       package = pkgs.wrapMpv (pkgs.mpv-unwrapped.override {
-        ffmpeg_5 = pkgs.ffmpeg_5-full; # TODO: check config.sys.ffmpeg-full.enable and/or use the same package as that
+        ffmpeg = pkgs.ffmpeg-full; # TODO: check config.sys.ffmpeg-full.enable and/or use the same package as that
       }) {
         scripts = [
           pkgs.mpvScripts.mpris
