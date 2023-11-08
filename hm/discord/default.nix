@@ -20,7 +20,7 @@ in
   };
   config = lib.mkIf config.sys.discord.enable {
     home.packages = [
-      (pkgs.discord.override { withVencord = true; })
+      (pkgs.discord.override { withVencord = true; withTTS = true; })
       krisp-patcher
     ];
   };
