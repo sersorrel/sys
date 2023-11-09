@@ -5,13 +5,6 @@
 
   };
 
-  # TODO: remove this once todoist-electron is updated
-  nixConfig = {
-    permittedInsecurePackages = [
-      "electron-21.4.0"
-    ];
-  };
-
   outputs = inputs: {
 
     darwinModules.default = { ... }: {
