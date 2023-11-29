@@ -13,6 +13,7 @@
       enable = true;
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
       xdgOpenUsePortal = true;
+      config.common.default = "*"; # for now just use whatever portal is available (preferring alphabetically earlier ones)
     };
     environment.systemPackages = [
       pkgs.glib
