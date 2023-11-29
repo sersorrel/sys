@@ -11,7 +11,7 @@
   config = {
     home.packages = [ pkgs.dig.dnsutils ];
     home.file.".digrc".text = ''
-      +noall +answer +ttlunits +multiline
+      +noall +answer +ttlunits +multiline +search
     '';
   };
 }
