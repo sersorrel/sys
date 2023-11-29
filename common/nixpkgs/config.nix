@@ -21,6 +21,7 @@
     "talon"
     "talon-beta"
     "todoist-electron"
+    "todoist-electron-8.9.3" # https://github.com/NixOS/nixpkgs/issues/267508
     "webstorm"
     "zoom"
   ];
