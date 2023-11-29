@@ -20,17 +20,5 @@
   in lib.mkIf config.sys.tailscale.enable {
     services.tailscale.enable = true;
     systemd.network.wait-online.ignoredInterfaces = [ config.services.tailscale.interfaceName ];
-    networking.networkmanager.insertNameservers = [ "100.100.100.100" ];
-    # based on nixos/modules/services/networking/networkmanager.nix
-    environment.etc."NetworkManager/dispatcher.d/02overridesearchdomain".source = pkgs.writeScript "02overridesearchdomain" ''
-      #!/bin/sh
-      PATH=${lib.makeBinPath [ pkgs.gnused pkgs.gnugrep pkgs.coreutils ]}
-      tmp=$(mktemp)
-      sed '/search /d' /etc/resolv.conf > $tmp
-      grep 'search ' /etc/resolv.conf | \
-        grep -vf ${sd config.sys.tailscale.tailnets} > $tmp.sd
-      cat $tmp ${sd config.sys.tailscale.tailnets} $tmp.sd > /etc/resolv.conf
-      rm -f $tmp $tmp.sd
-    '';
   };
 }
