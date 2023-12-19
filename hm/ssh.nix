@@ -13,9 +13,7 @@
     programs.ssh = {
       enable = true;
       matchBlocks = config.sys.ssh.hosts;
-      extraConfig = ''
-        AddKeysToAgent yes
-      '';
+      addKeysToAgent = "yes";
     };
   };
 }
