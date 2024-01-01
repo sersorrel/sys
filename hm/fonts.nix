@@ -6,6 +6,7 @@
     iosevka
     jost
     meslo-lgs-nf
+    monaspace
     noto-fonts
     noto-fonts-cjk
     source-sans-pro
