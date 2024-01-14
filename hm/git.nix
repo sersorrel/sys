@@ -19,7 +19,7 @@
     };
   };
   config = lib.mkIf config.sys.git.enable {
-    home.packages = [ pkgs.tig ];
+    home.packages = [ pkgs.tig pkgs.rs-git-fsmonitor ];
     sys.gpg.enable = lib.mkDefault true; # `git log` prints warning messages on signed commits otherwise
     xdg.configFile."git/message".text = "\n";
     programs.git = {
