@@ -12,7 +12,8 @@
     home.packages = [
       pkgs.nix-diff
       pkgs.nix-output-monitor
-      pkgs.expect # for `unbuffer`ing nix-build when piping to nix-output-monitor
+      # pkgs.expect # for `unbuffer`ing nix-build when piping to nix-output-monitor
+      # FIXME: having expect installed puts a broken mkpasswd in $PATH
       pkgs.nix-prefetch-github
       pkgs.nix-prefetch-scripts
     ];
