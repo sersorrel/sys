@@ -9,8 +9,12 @@
     };
   };
   config = lib.mkIf config.sys.starship.enable {
+    programs.fish.shellInit = ''
+      eval (${config.home.profileDirectory}/bin/starship init fish)
+    '';
     programs.starship = {
       enable = true;
+      enableFishIntegration = false;
       settings = {
         battery = {
           disabled = true;

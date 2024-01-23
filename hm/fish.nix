@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = {
@@ -152,6 +152,17 @@
           set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
         end
       '';
+      plugins = [
+        {
+          name = "fish-async-prompt";
+          src = pkgs.fetchFromGitHub {
+            owner = "acomagu";
+            repo = "fish-async-prompt";
+            rev = "4c732cc043b8dd04e64a169ec6bbf3a9b394819f";
+            hash = "sha256-YgqZINmY4nKphlqwHo2B0NfP4nmSxIIuAMUuoftI9Lg=";
+          };
+        }
+      ];
     };
   };
 }
