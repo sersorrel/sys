@@ -39,6 +39,9 @@
           read_only_style = "";
           format = "in [$path]($style)[$read_only]($read_only_style) ";
         };
+        gcloud = {
+          format = "on [$symbol$account]($style) ";
+        };
         git_branch = {
           only_attached = true;
         };
