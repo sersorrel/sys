@@ -36,6 +36,7 @@
 
       ## Misc symbols
       <Multi_key> <at> <slash> : "✓" U2713 # CHECK MARK
+      <Multi_key> <n> <b> : "※" U203B # REFERENCE MARK
 
       ## Music
       <Multi_key> <numbersign> <F> : "𝆑" U1D191 # MUSICAL SYMBOL FORTE
