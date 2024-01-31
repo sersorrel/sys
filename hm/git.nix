@@ -88,6 +88,7 @@
         "*.out"
         "*.o"
         ".nix-script-cache/"
+        "/result"
       ];
       extraConfig = {
         core = {
