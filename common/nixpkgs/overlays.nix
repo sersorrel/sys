@@ -103,6 +103,11 @@ in
         makeWrapper $steamBin $out/bin/steam --prefix LD_PRELOAD : ${preloadLibs}/\$PLATFORM/filter_SDL_DisableScreenSaver.so
       '';
     });
+    xdg-desktop-portal-gtk = super.xdg-desktop-portal-gtk.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/xdg-desktop-portal-gtk-0001-dont-truncate-urls.patch)
+      ];
+    });
     # software not in nixpkgs
     uoyweek = super.rustPlatform.buildRustPackage {
       pname = "uoyweek";

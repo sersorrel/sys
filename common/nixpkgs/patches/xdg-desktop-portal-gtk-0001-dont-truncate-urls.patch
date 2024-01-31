@@ -1,0 +1,13 @@
+diff --git a/src/appchooserdialog.c b/src/appchooserdialog.c
+index 1bbe9c7..6ea659f 100644
+--- a/src/appchooserdialog.c
++++ b/src/appchooserdialog.c
+@@ -31,7 +31,7 @@
+ #include "appchooserdialog.h"
+ #include "appchooserrow.h"
+ 
+-#define LOCATION_MAX_LENGTH 40
++#define LOCATION_MAX_LENGTH G_MAXLONG
+ #define INITIAL_LIST_SIZE 3
+ 
+ struct _AppChooserDialog {
