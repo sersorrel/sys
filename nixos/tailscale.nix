@@ -18,7 +18,10 @@
       lib.concatStrings (map (s: "search ${s}.ts.net\n") xs)
     );
   in lib.mkIf config.sys.tailscale.enable {
-    services.tailscale.enable = true;
+    services.tailscale = {
+      enable = true;
+      useRoutingFeatures = lib.mkDefault "client";
+    };
     systemd.network.wait-online.ignoredInterfaces = [ config.services.tailscale.interfaceName ];
   };
 }
