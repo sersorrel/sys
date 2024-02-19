@@ -139,7 +139,7 @@ in
       ];
     };
     file2img = super.callPackage (localPath ./programs/file2img.nix) {};
-    fishPlugins = super.fishPlugins.overrideScope' (self': super': let
+    fishPlugins = super.fishPlugins.overrideScope (self': super': let
       meta = {
         pname = "fenv.rs";
         version = "unstable-2023-07-12";
