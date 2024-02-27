@@ -4,10 +4,10 @@ index ee14688d..70820ca5 100644
 +++ b/src/blocks/kdeconnect.rs
 @@ -117,6 +117,8 @@ pub async fn run(config: Config, mut api: CommonApi) -> Result<()> {
                      if battery_state {
-                         widget.state = if charging {
+                         widget.state = if info.charging {
                              State::Good
-+                        } else if level <= 0 {
++                        } else if bat_level <= 0 {
 +                            State::Idle
-                         } else if level <= config.bat_critical {
+                         } else if bat_level <= config.bat_critical {
                              State::Critical
-                         } else if level <= config.bat_info {
+                         } else if bat_level <= config.bat_info {
