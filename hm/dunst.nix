@@ -36,7 +36,7 @@
           icon_position = "left";
           max_icon_size = 24;
           corner_radius = 4;
-          dmenu = "/run/current-system/sw/bin/rofi -dmenu -p ''";
+          dmenu = "/run/current-system/sw/bin/rofi -dmenu -p '\"> \"'";
           browser = "/run/current-system/sw/bin/google-chrome-stable";
           mouse_left_click = "do_action";
           mouse_middle_click = "close_current";
