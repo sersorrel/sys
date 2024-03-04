@@ -45,11 +45,6 @@ in
         gappsWrapperArgs+=(--prefix LD_LIBRARY_PATH : ${super.lib.makeLibraryPath [ self.libglvnd ]}:/run/opengl-driver/lib)
       ''; # add /run/wrappers/bin to prefix
     });
-    direnv = super.direnv.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-        (localPath ./patches/direnv-0001-reduce-verbosity.patch)
-      ];
-    });
     i3 = super.i3.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/i3-0001-i3bar-border.patch)
