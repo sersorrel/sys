@@ -276,13 +276,14 @@
           config = ''
             lua <<EOF
             require'lspconfig'.pyright.setup{}
-            require'lspconfig'.rnix.setup{
-              -- fix the default use of $HOME as root_dir ($PWD is probably more sensible)
-              root_dir = function(fname)
-                return require'lspconfig.util'.find_git_ancestor(fname) or vim.fn.getcwd()
-              end,
-            }
-            -- NB: as of 2022-11-06, elixirls and r_language_server have the same root_dir brokenness as rnix; worth checking the current behaviour if you ever add those
+            require'lspconfig'.nil_ls.setup{}
+            -- NB: as of 2022-11-06, elixirls, r_language_server, and rnix have some root_dir brokenness, fixed by something like:
+            -- require'lspconfig'.rnix.setup{
+            --   -- fix the default use of $HOME as root_dir ($PWD is probably more sensible)
+            --   root_dir = function(fname)
+            --     return require'lspconfig.util'.find_git_ancestor(fname) or vim.fn.getcwd()
+            --   end,
+            -- }
             EOF
           '';
         }
@@ -327,8 +328,8 @@
         shellcheck
       ];
     };
-    home.packages = with pkgs; [
-      rnix-lsp
+    home.packages = [
+      pkgs.nil
     ];
   });
 }
