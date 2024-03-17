@@ -11,5 +11,8 @@
   config = lib.mkIf config.sys.adb.enable {
     programs.adb.enable = true;
     users.users.ash.extraGroups = [ "adbusers" ];
+    environment.sessionVariables = {
+      ADB_LIBUSB = "1";
+    };
   };
 }
