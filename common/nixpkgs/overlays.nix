@@ -25,6 +25,10 @@ in
     });
     # custom patches
     gpu-screen-recorder = super.gpu-screen-recorder.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (localPath ./patches/gpu-screen-recorder-0001-quiet.patch)
+        (localPath ./patches/gpu-screen-recorder-0002-filename.patch)
+      ];
       postInstall = ''
         install -Dt $out/bin gpu-screen-recorder gsr-kms-server
         mkdir $out/bin/.wrapped

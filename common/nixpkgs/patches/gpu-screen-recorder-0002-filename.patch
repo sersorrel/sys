@@ -1,0 +1,17 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index 8e1723d..9113c9f 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -1118,10 +1118,10 @@ static void save_replay_async(AVCodecContext *video_codec_context, int video_str
+     if (make_folders) {
+         std::string output_folder = output_dir + '/' + get_date_only_str();
+         create_directory_recursive(&output_folder[0]);
+-        save_replay_output_filepath = output_folder + "/Replay_" + get_time_only_str() + "." + file_extension;
++        save_replay_output_filepath = output_folder + "/" + get_time_only_str() + "." + file_extension;
+     } else {
+         create_directory_recursive(&output_dir[0]);
+-        save_replay_output_filepath = output_dir + "/Replay_" + get_date_str() + "." + file_extension;
++        save_replay_output_filepath = output_dir + "/" + get_date_str() + "." + file_extension;
+     }
+ 
+     save_replay_thread = std::async(std::launch::async, [video_stream_index, container_format, start_index, video_pts_offset, audio_pts_offset, video_codec_context, &audio_tracks]() mutable {
