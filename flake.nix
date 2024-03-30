@@ -1,15 +1,13 @@
 {
   description = "dependency flake for my system configurations";
 
-  inputs = {
-
-  };
+  inputs = {};
 
   outputs = inputs: {
 
     darwinModules.default = { ... }: {
-      imports = inputs.self.lib.importDir ./darwin;
       _module.args.sysDir = ./.;
+      imports = inputs.self.lib.importDir ./darwin;
     };
 
     homeModules.default = { lib, ... }: {
