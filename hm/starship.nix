@@ -9,6 +9,7 @@
     };
   };
   config = lib.mkIf config.sys.starship.enable {
+    home.sessionVariables.STARSHIP_LOG = "error"; # hide warnings
     programs.fish.shellInit = ''
       eval (${config.home.profileDirectory}/bin/starship init fish)
     '';
