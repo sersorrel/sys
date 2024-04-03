@@ -15,8 +15,9 @@ in
     systemd.user.services.unified-inhibit = {
       Unit = {
         Description = "unified-inhibit wakelock bridge";
-        Requires = [ "graphical-session.target" ];
-        After = [ "graphical-session.target" ];
+        # seems to break xdg-desktop-portal if we start first
+        Requires = [ "graphical-session.target" "xdg-desktop-portal.service" ];
+        After = [ "graphical-session.target" "xdg-desktop-portal.service" ];
       };
       Install = {
         WantedBy = [ "graphical-session.target" ];
