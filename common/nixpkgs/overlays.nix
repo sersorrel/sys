@@ -24,6 +24,7 @@ in
       ];
     });
     # custom patches
+    bat = assert super.bat.version == "0.24.0"; super.callPackage ./programs/bat.nix {}; # https://github.com/sharkdp/bat/pull/2896
     gpu-screen-recorder = super.gpu-screen-recorder.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/gpu-screen-recorder-0001-quiet.patch)

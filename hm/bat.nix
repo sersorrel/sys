@@ -14,7 +14,8 @@
       config = {
         italic-text = "always";
         style = "plain";
-        theme = "gruvbox-light";
+        theme-light = "gruvbox-light";
+        theme-dark = "gruvbox-dark";
       };
     };
   };
