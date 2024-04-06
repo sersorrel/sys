@@ -190,9 +190,9 @@ endif
 " Highlight the column after tw by default.
 set cc=+1
 
-" Enable conceal, even when on the same line.
+" Enable conceal in insert mode only.
 set conceallevel=2
-set concealcursor=nvc
+set concealcursor=
 
 " Show some whitespace/virtual characters, per lcs.
 set list
