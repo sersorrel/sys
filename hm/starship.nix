@@ -25,6 +25,13 @@
           error_symbol = ''[\$](bold red)'';
           vicmd_symbol = ''[:](bold green)'';
         };
+        custom.just = {
+          description = "Whether a justfile is present";
+          format = "just [($output) ]($style)";
+          command = '' just --list --list-heading "" --quiet | wc -l '';
+          when = "test -e justfile || test -e Justfile";
+          shell = "sh";
+        };
         # TODO: this maybe causes some problems?
         #     INFO Failed accepting a client connection, accept_error: Accept(Os { code: 24, kind: Uncategorized, message: "Too many open files" })
         # Might be unrelated, though: https://github.com/nix-community/lorri/issues/82
