@@ -29,7 +29,7 @@ in
     home.packages = [
       (pkgs.wrapOBS {
         plugins = [
-          # pkgs.obs-studio-plugins.obs-backgroundremoval
+          pkgs.obs-studio-plugins.obs-backgroundremoval
           pkgs.obs-studio-plugins.obs-pipewire-audio-capture
         ];
       })
