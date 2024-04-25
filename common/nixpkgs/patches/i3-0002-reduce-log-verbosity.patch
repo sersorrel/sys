@@ -1,0 +1,35 @@
+diff --git a/i3bar/src/xcb.c b/i3bar/src/xcb.c
+index 7202825a..524ee53b 100644
+--- a/i3bar/src/xcb.c
++++ b/i3bar/src/xcb.c
+@@ -943,7 +943,7 @@ static void handle_client_message(xcb_client_message_event_t *event) {
+                                                                        xembedc,
+                                                                        &error);
+             if (error != NULL) {
+-                ELOG("Error getting _XEMBED_INFO property: error_code %d\n",
++                DLOG("Error getting _XEMBED_INFO property: error_code %d\n",
+                      error->error_code);
+                 free(error);
+                 return;
+@@ -1124,7 +1124,7 @@ static void handle_property_notify(xcb_property_notify_event_t *event) {
+ 
+         trayclient *client = trayclient_from_window(event->window);
+         if (!client) {
+-            ELOG("PropertyNotify received for unknown window %08x\n", event->window);
++            DLOG("PropertyNotify received for unknown window %08x\n", event->window);
+             return;
+         }
+ 
+diff --git a/libi3/draw_util.c b/libi3/draw_util.c
+index 337017fe..e1829e2a 100644
+--- a/libi3/draw_util.c
++++ b/libi3/draw_util.c
+@@ -22,7 +22,7 @@ static void draw_util_set_source_color(surface_t *surface, color_t color);
+ 
+ static bool surface_initialized(surface_t *surface) {
+     if (surface->id == XCB_NONE) {
+-        ELOG("Surface %p is not initialized, skipping drawing.\n", surface);
++        DLOG("Surface %p is not initialized, skipping drawing.\n", surface);
+         return false;
+     }
+     return true;

@@ -53,6 +53,7 @@ in
     i3 = super.i3.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/i3-0001-i3bar-border.patch)
+        (localPath ./patches/i3-0002-reduce-log-verbosity.patch)
       ];
     });
     i3lock-color = super.i3lock-color.overrideAttrs (old: {
