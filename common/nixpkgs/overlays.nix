@@ -23,6 +23,13 @@ in
         })
       ];
     });
+    # https://github.com/NixOS/nixpkgs/pull/306544
+    n8n = super.n8n.overrideAttrs (old: {
+      nativeBuildInputs = (old.nativeBuildInputs or []) ++ [
+        super.xcbuild
+      ];
+      NIX_CFLAGS_COMPILE = "-DNODE_API_EXPERIMENTAL_NOGC_ENV_OPT_OUT";
+    });
     # custom patches
     bat = assert super.bat.version == "0.24.0"; super.callPackage ./programs/bat.nix {}; # https://github.com/sharkdp/bat/pull/2896
     gpu-screen-recorder = super.gpu-screen-recorder.overrideAttrs (old: {
