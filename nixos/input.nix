@@ -10,7 +10,7 @@
   };
   config = lib.mkMerge [
     {
-      services.xserver.libinput.mouse.middleEmulation = false;
+      services.libinput.mouse.middleEmulation = false;
     }
     (lib.mkIf config.sys.gamepads.enable {
       services.joycond.enable = true;
