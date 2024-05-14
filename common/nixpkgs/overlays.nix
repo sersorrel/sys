@@ -154,13 +154,13 @@ in
         src = super.fetchFromGitHub {
           owner = "sersorrel";
           repo = "fenv.rs";
-          rev = "9f7ee64a8131ae1eb9c5e66834cbb02d5f6526a8";
-          sha256 = "0mgbg6q15pf1h6npv7g0b0f2z33n2cgs55568y5sgz2hw5m11658";
+          rev = "6bff44ff5b636407149d22dcf4776a22e71908ec";
+          sha256 = "sha256-jWaEd6G44j9sZtdBUxp5gCrlcYXrecUXeVo+foyfVfM=";
         };
       };
       fenv = super.rustPlatform.buildRustPackage {
         inherit (meta) pname version src;
-        cargoSha256 = "12id2h0k4gyzlv9mcan6rw8y6nzq5ik4rq17fc0qckdh8vq5axzb";
+        cargoSha256 = "sha256-63dV8EawTYYBcyfgTGYs+FvjEc/GKlbTpt8/MgEULYo=";
       };
     in {
       foreign-env = super'.buildFishPlugin {
