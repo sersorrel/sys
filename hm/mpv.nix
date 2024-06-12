@@ -11,9 +11,11 @@
   config = lib.mkIf config.sys.mpv.enable {
     programs.mpv = {
       enable = true;
-      package = pkgs.wrapMpv (pkgs.mpv-unwrapped.override {
-        ffmpeg = pkgs.ffmpeg-full; # TODO: check config.sys.ffmpeg-full.enable and/or use the same package as that
-      }) {
+      package = (pkgs.mpv-unwrapped.wrapper {
+        mpv = pkgs.mpv-unwrapped.override {
+          ffmpeg = pkgs.ffmpeg-full; # TODO: check config.sys.ffmpeg-full.enable and/or use the same package as that
+        };
+      }).override {
         scripts = [
           pkgs.mpvScripts.mpris
           ((pkgs.writeTextFile {
