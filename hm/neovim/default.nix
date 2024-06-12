@@ -324,7 +324,7 @@
         }
       ];
       extraPackages = with pkgs; [
-        nodePackages.pyright
+        pyright
         shellcheck
       ];
     };
