@@ -101,6 +101,20 @@
           wraps = "lsof";
           body = "command lsof -P $argv";
         };
+        man = { # https://hachyderm.io/@leftpaddotpy/112681918759377740
+          wraps = "man";
+          body = ''
+            set -l cols (tput cols)
+            test -z $cols; and set -l cols $COLUMNS
+            test -z $cols; and set -l cols $MANWIDTH
+            test -z $cols; and set -l cols 80
+            if test $cols -gt 100
+              MANWIDTH=100 command man $argv
+            else
+              MANWIDTH="$cols" command man $argv
+            end
+          '';
+        };
         mkcd = {
           wraps = "mkdir";
           body = "mkdir -p -- $argv[1] && cd -- $argv[1]";
