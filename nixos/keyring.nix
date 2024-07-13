@@ -10,6 +10,6 @@
   };
   config = {
     services.gnome.gnome-keyring.enable = true;
-    environment.systemPackages = [ pkgs.gnome.seahorse ];
+    environment.systemPackages = [ pkgs.seahorse ];
   };
 }
