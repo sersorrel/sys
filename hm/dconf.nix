@@ -9,6 +9,6 @@
     };
   };
   config = lib.mkIf config.sys.dconf.enableEditor {
-    home.packages = [ pkgs.gnome.dconf-editor ];
+    home.packages = [ pkgs.dconf-editor ];
   };
 }
