@@ -168,6 +168,7 @@
           '';
         }
         essence-vim
+        vim-just
         {
           plugin = vim-polyglot;
           config = ''
