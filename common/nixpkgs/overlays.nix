@@ -37,25 +37,6 @@ in
         (localPath ./patches/gpu-screen-recorder-0001-quiet.patch)
         (localPath ./patches/gpu-screen-recorder-0002-filename.patch)
       ];
-      postInstall = ''
-        install -Dt $out/bin gpu-screen-recorder gsr-kms-server
-        mkdir $out/bin/.wrapped
-        mv $out/bin/gpu-screen-recorder $out/bin/.wrapped/
-        makeWrapper "$out/bin/.wrapped/gpu-screen-recorder" "$out/bin/gpu-screen-recorder" \
-        --prefix LD_LIBRARY_PATH : ${self.libglvnd}/lib \
-        --suffix PATH : $out/bin
-      ''; # prefix -> suffix
-    });
-    gpu-screen-recorder-gtk = super.gpu-screen-recorder-gtk.overrideAttrs (old: {
-      installPhase = ''
-        install -Dt $out/bin/ gpu-screen-recorder-gtk
-        install -Dt $out/share/applications/ gpu-screen-recorder-gtk.desktop
-
-        gappsWrapperArgs+=(--prefix PATH : /run/wrappers/bin:${super.lib.makeBinPath [ self.gpu-screen-recorder ]})
-        # gappsWrapperArgs+=(--prefix PATH : /run/wrappers/bin)
-        # we also append /run/opengl-driver/lib as it otherwise fails to find libcuda.
-        gappsWrapperArgs+=(--prefix LD_LIBRARY_PATH : ${super.lib.makeLibraryPath [ self.libglvnd ]}:/run/opengl-driver/lib)
-      ''; # add /run/wrappers/bin to prefix
     });
     i3 = super.i3.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
