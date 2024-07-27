@@ -28,7 +28,7 @@
       default = false;
     };
   };
-  config = lib.mkMkerge [
+  config = lib.mkMerge [
     (lib.mkIf config.sys.jetbrains.clion.enable {
       home.packages = [ pkgs.jetbrains.clion ];
     })
