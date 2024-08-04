@@ -107,7 +107,7 @@ in
         rev = "d32e4096dee51641270cb4b624d7b0727f101f42";
         sha256 = "17a2173myj6fxmgyaly6nz905b94vw6zr8qm5v2ig7yrxlqd9nnk";
       };
-      cargoSha256 = "1xfgszxbj1ji0wpz01n9hhwnba7kxbbqk53r0sgxasxbzfmmknw5";
+      cargoHash = "sha256-hdtZq/ura9WfBnmUidfq86hlOYTJBvAvB1EGufrXz/U=";
     };
     binary-ninja = super.callPackage (localPath ./programs/binary-ninja.nix) {};
     display-volume = super.rustPlatform.buildRustPackage {
@@ -119,7 +119,7 @@ in
         rev = "318a70933869d3a5c50bce06bda2887c3c287e84";
         sha256 = "1gqyxggxwk87ddcsisb4s1rw8f9z8lyxg95py0nn77q18w6f6srg";
       };
-      cargoSha256 = "1a8rm1hnw7gmbvaps9p0kcr3v0vm7a0ax31qcfsghhl3nckr4nkm";
+      cargoHash = "sha256-dVqSJ7ODQvi0YziMroA6dYM9MpvgJn3VXvUdbmGoGak=";
       nativeBuildInputs = [
         super.autoPatchelfHook
       ];
@@ -141,7 +141,7 @@ in
       };
       fenv = super.rustPlatform.buildRustPackage {
         inherit (meta) pname version src;
-        cargoSha256 = "sha256-63dV8EawTYYBcyfgTGYs+FvjEc/GKlbTpt8/MgEULYo=";
+        cargoHash = "sha256-63dV8EawTYYBcyfgTGYs+FvjEc/GKlbTpt8/MgEULYo=";
       };
     in {
       foreign-env = super'.buildFishPlugin {
