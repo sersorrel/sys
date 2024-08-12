@@ -1,0 +1,12 @@
+diff --git a/src/blocks/kdeconnect.rs b/src/blocks/kdeconnect.rs
+index 0318fb25..f03494fc 100644
+--- a/src/blocks/kdeconnect.rs
++++ b/src/blocks/kdeconnect.rs
+@@ -160,7 +160,6 @@ pub async fn run(config: &Config, api: &CommonApi) -> Result<()> {
+                     );
+ 
+                     if info.cellular_network_strength <= 0 {
+-                        widget.state = State::Critical;
+                         values.insert("network_type".into(), Value::text("×".into()));
+                     } else {
+                         values.insert("network_type".into(), Value::text(cellular_network_type));

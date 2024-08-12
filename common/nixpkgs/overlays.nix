@@ -52,11 +52,12 @@ in
         sha256 = "1l25x4wx3ar6lfpxcm5whzpxyblcs8blf4gqi3vh2ynvn7cn1qib";
       };
     });
-    i3status-rust = super.i3status-rust.overrideAttrs (old: rec {
+    i3status-rust = super.i3status-rust.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (localPath ./patches/i3status-rust-0001-uptime-warning.patch)
         (localPath ./patches/i3status-rust-0002-kdeconnect-zero-battery.patch)
         (localPath ./patches/i3status-rust-0003-gpu-use-vram-not-utilisation.patch)
+        (localPath ./patches/i3status-rust-0004-kdeconnect-no-cell-network.patch)
       ];
     });
     rhythmbox = super.rhythmbox.overrideAttrs (old: {
