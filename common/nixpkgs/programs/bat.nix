@@ -17,10 +17,10 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "bash";
     repo = "bat";
-    rev = "6213319adcc51d36e20788577ba0862fdae7114c";
-    hash = "sha256-OqYdw+hSs43GDPhZ/Sun8uc4KJ6yE/ZgNhIKudR/16Y=";
+    rev = "b9b981f6572c612cce443a8fff0b5fb9c24d3868";
+    hash = "sha256-XC4Kx4cfBxyLfSx5EBsJwzZDKGvljw7U+NmcaBuan4M=";
   };
-  cargoHash = "sha256-GH+5dCj7BcKcuwJ0jV6GHwXsac89hB9C1zFAmnDLsIg=";
+  cargoHash = "sha256-oGLZYfZ/kfdl3IsOIBqzyIxr0THjkaUWxwxB7fP1uqA=";
 
   patches = [
     ./../patches/bat-0001-always-detect-colour-scheme.patch
