@@ -9,6 +9,6 @@
     };
   };
   config = lib.mkIf config.sys.gnome-music.enable {
-    home.packages = [ pkgs.gnome.gnome-music ];
+    home.packages = [ pkgs.gnome-music ];
   };
 }
