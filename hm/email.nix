@@ -35,19 +35,30 @@
           passwordCommand = config.sys.email.passwordCommands."ash@sorrel.sh";
           primary = true;
           realName = "Ash Holland";
+          signature.showSignature = "append";
+          signature.text = ''
+
+            thanks,<br>
+            Ash<br>
+            she/her
+          '';
           smtp.host = "smtp-auth.mythic-beasts.com";
           smtp.port = 587;
           smtp.tls.useStartTls = true;
           thunderbird.enable = config.sys.email.thunderbird.enable;
           thunderbird.settings = id: {
-            "mail.identity.id_${id}.archive_granularity" = 1;
-            "mail.identity.id_${id}.archive_keep_folder_structure" = true;
-            "mail.identity.id_${id}.sig_on_fwd" = true;
+            "mail.identity.id_${id}.archive_granularity" = 0;
+            "mail.identity.id_${id}.archive_keep_folder_structure" = false;
             "mail.identity.id_${id}.drafts_folder_picker_mode" = "0";
             "mail.identity.id_${id}.fcc_folder_picker_mode" = "0";
+            "mail.identity.id_${id}.htmlSigFormat" = true;
+            "mail.identity.id_${id}.reply_on_top" = 1;
+            "mail.identity.id_${id}.sig_bottom" = false;
+            "mail.identity.id_${id}.sig_on_fwd" = true;
             "mail.tabs.autoHide" = false;
             "mail.tabs.drawInTitlebar" = false;
             "mail.wrap_long_lines" = false;
+            "mail.warn_on_collapsed_thread_operation" = false;
             "mailnews.start_page.enabled" = false;
             "network.cookie.cookieBehavior" = 2; # disable cookies
             "privacy.donottrackheader.enabled" = true;
