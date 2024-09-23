@@ -40,7 +40,7 @@
 
             thanks,<br>
             Ash<br>
-            she/her
+            she/her<br>
           '';
           smtp.host = "smtp-auth.mythic-beasts.com";
           smtp.port = 587;
