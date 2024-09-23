@@ -38,7 +38,21 @@
               end)
             '';
           }).overrideAttrs (old: {
-            passthru.scriptName = "audio-osc.lua";
+            passthru.scriptName = "audio-osc.lua"; # TODO FIXME: this probably overrides any existing passthru...
+          }))
+          pkgs.mpvScripts.thumbfast
+          ((pkgs.mpvScripts.buildLua {
+            pname = "mpv-thumbfast-vanilla-osc";
+            version = "0-unstable-2023-12-21";
+            src = pkgs.fetchFromGitHub {
+              owner = "po5";
+              repo = "thumbfast";
+              rev = "5fefc9b8e995cf5e663666aa10649af799e60186"; # vanilla-osc branch
+              hash = "sha256-6nICOdtPzDQUMufqCJ+g2OnPasOgp3PegnRoWw8TVBU=";
+            };
+            passthru.scriptName = "player/lua/osc.lua";
+          }).overrideAttrs (old: {
+            passthru.scriptName = "osc.lua"; # TODO FIXME: this probably overrides any existing passthru...
           }))
         ];
         # TODO: mute on step forwards: https://github.com/mpv-player/mpv/issues/6104
