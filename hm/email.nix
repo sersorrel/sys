@@ -55,13 +55,14 @@
             "mail.identity.id_${id}.reply_on_top" = 1;
             "mail.identity.id_${id}.sig_bottom" = false;
             "mail.identity.id_${id}.sig_on_fwd" = true;
-            "mail.tabs.autoHide" = false;
+            "mail.tabs.autoHide" = true;
             "mail.tabs.drawInTitlebar" = false;
             "mail.wrap_long_lines" = false;
             "mail.warn_on_collapsed_thread_operation" = false;
             "mailnews.start_page.enabled" = false;
             "network.cookie.cookieBehavior" = 2; # disable cookies
             "privacy.donottrackheader.enabled" = true;
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
             "toolkit.tabbox.switchByScrolling" = true;
           };
           userName = "ash@sorrel.sh";
