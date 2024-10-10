@@ -84,6 +84,9 @@ stdenv.mkDerivation rec {
   autoPatchelfIgnoreMissingDeps = [
     "libQt6Qml.so.6"
     "libQt6PrintSupport.so.6"
+    "libwayland-client.so.0"
+    "libwayland-cursor.so.0"
+    "libwayland-egl.so.1"
   ];
 
   desktopItems = [
