@@ -55,6 +55,7 @@
             "mail.identity.id_${id}.reply_on_top" = 1;
             "mail.identity.id_${id}.sig_bottom" = false;
             "mail.identity.id_${id}.sig_on_fwd" = true;
+            "mail.identity.id_${id}.suppress_signature_separator" = true;
             "mail.tabs.autoHide" = true;
             "mail.tabs.drawInTitlebar" = false;
             "mail.wrap_long_lines" = false;
