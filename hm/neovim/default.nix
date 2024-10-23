@@ -45,6 +45,15 @@
         sha256 = "sha256-uaR8gNcCJBa7SmlKxuaT0BJPF8G6RDMMIPjqKJ8xPMw";
       };
     };
+    vim-gml = pkgs.vimUtils.buildVimPlugin {
+      name = "vim-gml";
+      src = pkgs.fetchFromGitHub {
+        owner = "JafarDakhan";
+        repo = "vim-gml";
+        rev = "382f7aecf6da88c077f34df2f863e750b4d0fdd3";
+        sha256 = "sha256-xIchBiNEZbrz0LRIWorJEac8y4DBa4akuM4JPqM0Yp4=";
+      };
+    };
     vim-pythonsense = pkgs.vimUtils.buildVimPlugin {
       name = "vim-pythonsense";
       src = pkgs.fetchFromGitHub {
@@ -168,6 +177,7 @@
           '';
         }
         essence-vim
+        vim-gml
         vim-just
         {
           plugin = vim-polyglot;
