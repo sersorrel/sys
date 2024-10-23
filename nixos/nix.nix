@@ -11,7 +11,7 @@ let
 in
 {
   nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [ "nix-command" "flakes" "repl-flake" ];
     settings.keep-outputs = true;
     settings.connect-timeout = 10;
     settings.log-lines = 20;
