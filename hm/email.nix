@@ -40,14 +40,14 @@
 
             thanks,<br>
             Ash<br>
-            she/her<br>
+            she/her<br><br>
           '';
           smtp.host = "smtp-auth.mythic-beasts.com";
           smtp.port = 587;
           smtp.tls.useStartTls = true;
           thunderbird.enable = config.sys.email.thunderbird.enable;
           thunderbird.settings = id: {
-            "mail.identity.id_${id}.archive_granularity" = 0;
+            "mail.identity.id_${id}.archive_granularity" = 1;
             "mail.identity.id_${id}.archive_keep_folder_structure" = false;
             "mail.identity.id_${id}.drafts_folder_picker_mode" = "0";
             "mail.identity.id_${id}.fcc_folder_picker_mode" = "0";
