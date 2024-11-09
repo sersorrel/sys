@@ -10,8 +10,8 @@
   };
   config = lib.mkIf config.sys.gnome-tracker.enable {
     services.gnome = {
-      tracker.enable = true;
-      tracker-miners.enable = true;
+      tinysparql.enable = true;
+      localsearch.enable = true;
     };
   };
 }
