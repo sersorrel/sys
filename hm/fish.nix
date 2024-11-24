@@ -172,8 +172,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "acomagu";
             repo = "fish-async-prompt";
-            rev = "4c732cc043b8dd04e64a169ec6bbf3a9b394819f";
-            hash = "sha256-YgqZINmY4nKphlqwHo2B0NfP4nmSxIIuAMUuoftI9Lg=";
+            rev = "316aa03c875b58e7c7f7d3bc9a78175aa47dbaa8";
+            hash = "sha256-J7y3BjqwuEH4zDQe4cWylLn+Vn2Q5pv0XwOSPwhw/Z0=";
           };
         }
       ];
