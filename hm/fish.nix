@@ -169,11 +169,20 @@
       plugins = [
         {
           name = "fish-async-prompt";
-          src = pkgs.fetchFromGitHub {
-            owner = "acomagu";
-            repo = "fish-async-prompt";
-            rev = "316aa03c875b58e7c7f7d3bc9a78175aa47dbaa8";
-            hash = "sha256-J7y3BjqwuEH4zDQe4cWylLn+Vn2Q5pv0XwOSPwhw/Z0=";
+          src = pkgs.applyPatches {
+            src = pkgs.fetchFromGitHub {
+              owner = "acomagu";
+              repo = "fish-async-prompt";
+              rev = "316aa03c875b58e7c7f7d3bc9a78175aa47dbaa8";
+              hash = "sha256-J7y3BjqwuEH4zDQe4cWylLn+Vn2Q5pv0XwOSPwhw/Z0=";
+            };
+            patches = [
+              (pkgs.fetchpatch {
+                url = "https://github.com/acomagu/fish-async-prompt/commit/23e416fdece97c388173ba2c0065a10d185a0821.patch";
+                hash = "sha256-S+5ZBSJ28dSp0iEfSkHFMLg6gLr8SPQDjUp4+Jo8U+U=";
+                revert = true;
+              })
+            ];
           };
         }
       ];
