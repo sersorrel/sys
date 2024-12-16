@@ -46,10 +46,6 @@
           # this means that the time shown in the prompt is the time the command was run, not the time the prompt was first printed
           bind \r repaint execute
         '';
-        https = {
-          wraps = "http";
-          body = "http --default-scheme https $argv";
-        };
         icat = "kitty +kitten icat --align left --place (math $COLUMNS - 2)x(math $LINES - 2)@0x(math $LINES - 1) $argv";
         kd = {
           wraps = "fd";
