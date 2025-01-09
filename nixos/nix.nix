@@ -37,6 +37,7 @@ in
           overlays = (import ${sysDir + "/common/nixpkgs/overlays.nix"} {
             unstable = import ${escapeNixString (toString inputs.nixpkgs-unstable)} { system = ${escapeNixString pkgs.system}; config = import ${sysDir + "/common/nixpkgs/config.nix"}; };
             here = /. + ${escapeNixString (toString (sysDir + "/common/nixpkgs"))};
+            moonlight = builtins.getFlake (${escapeNixString (toString inputs.moonlight)});
           });
         in foldl' (flip extends) (_: super) overlays self
         EOF
@@ -45,6 +46,6 @@ in
     systemd.tmpfiles.rules = lib.mapAttrsToList (name: value: "L+ ${value} - - - - ${inputs.${name}}") channelPaths;
     systemd.services.nix-daemon.serviceConfig.Nice = 10;
     nixpkgs.config = import (sysDir + "/common/nixpkgs/config.nix");
-    nixpkgs.overlays = import (sysDir + "/common/nixpkgs/overlays.nix") { inherit unstable; here = sysDir + "/common/nixpkgs"; };
+    nixpkgs.overlays = import (sysDir + "/common/nixpkgs/overlays.nix") { inherit unstable; here = sysDir + "/common/nixpkgs"; inherit (inputs) moonlight; };
   };
 }

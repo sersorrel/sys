@@ -1,4 +1,4 @@
-{ unstable, here }:
+{ unstable, here, moonlight }:
 
 let
   localPath = path: let
@@ -11,6 +11,7 @@ let
   in assert substring 0 thisLen path' == this'; here + (substring thisLen pathLen path');
 in
 [
+  moonlight.overlays.default
   (self: super: {
     # out-of-date software/waiting for backports
     obsidian-export = assert !(super ? obsidian-export); super.callPackage (localPath ./programs/obsidian-export.nix) {};
