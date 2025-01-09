@@ -17,10 +17,25 @@ in
       type = lib.types.bool;
       default = false;
     };
+    sys.discord.moonlight = lib.mkOption {
+      description = "Whether to enable the moonlight client mod.";
+      type = lib.types.bool;
+      default = false;
+    };
+    sys.discord.vencord = lib.mkOption {
+      description = "Whether to enable the Vencord client mod.";
+      type = lib.types.bool;
+      default = false;
+    };
   };
   config = lib.mkIf config.sys.discord.enable {
+    assertions = [
+      { assertion = config.sys.discord.moonlight -> !config.sys.discord.vencord; }
+      { assertion = config.sys.discord.vencord -> !config.sys.discord.moonlight; }
+    ];
     home.packages = [
-      (pkgs.discord.override { withTTS = true; })
+      (lib.mkIf config.sys.discord.moonlight pkgs.discord-moonlight)
+      (lib.mkIf (!config.sys.discord.moonlight) (pkgs.discord.override { withVencord = config.sys.discord.vencord; }))
       krisp-patcher
     ];
   };

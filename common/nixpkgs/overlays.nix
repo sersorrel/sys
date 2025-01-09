@@ -11,7 +11,9 @@ let
   in assert substring 0 thisLen path' == this'; here + (substring thisLen pathLen path');
 in
 [
-  moonlight.overlays.default
+  (self: super: {
+    discord-moonlight = (moonlight.overlays.default self super).discord;
+  })
   (self: super: {
     # out-of-date software/waiting for backports
     obsidian-export = assert !(super ? obsidian-export); super.callPackage (localPath ./programs/obsidian-export.nix) {};
