@@ -14,6 +14,7 @@
       config = {
         italic-text = "always";
         style = "plain";
+        theme = "auto:always"; # detect background colour even when piped to a pager (occasional strange side-effects, perhaps worse via SSH?)
         theme-light = "gruvbox-light";
         theme-dark = "gruvbox-dark";
       };
