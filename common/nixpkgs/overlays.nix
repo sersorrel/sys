@@ -33,18 +33,6 @@ in
       ];
       NIX_CFLAGS_COMPILE = "-DNODE_API_EXPERIMENTAL_NOGC_ENV_OPT_OUT";
     });
-    perlPackages = super.perlPackages.overrideScope (self': super': {
-      # https://github.com/NixOS/nixpkgs/pull/369129
-      CryptDES = super'.CryptDES.overrideAttrs (old: {
-        patches = (old.patches or []) ++ [
-          (super.fetchpatch {
-            name = "CryptDES-expose-perl_des_expand_key-and-perl_des_crypt.patch";
-            url = "https://github.com/NixOS/nixpkgs/raw/84758abe5ac20edd899ad048e586d18ea1e8c911/pkgs/development/perl-modules/CryptDES-expose-perl_des_expand_key-and-perl_des_crypt.patch";
-            sha256 = "sha256-JsHvLQaxcLGcGuyjcjWKD0ew6RlbLxoJ4/Mn2MKhjbM=";
-          })
-        ];
-      });
-    });
     # custom patches
     gpu-screen-recorder = super.gpu-screen-recorder.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
