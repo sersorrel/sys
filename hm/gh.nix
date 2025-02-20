@@ -12,6 +12,9 @@
     programs.gh = {
       enable = true;
       settings = {
+        aliases = {
+          fork = "repo fork --default-branch-only";
+        };
         git_protocol = "ssh";
       };
     };
