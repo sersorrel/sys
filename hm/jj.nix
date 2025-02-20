@@ -25,16 +25,16 @@
         templates = {
           draft_commit_description = ''
             concat(
-            description,
-            if(!description, "\n"),
-            "\n",
-            surround(
-            "\nJJ: This commit contains the following changes:\n", "",
-            indent("JJ:     ", diff.summary()),
-            ),
-            "JJ:\n",
-            "JJ: ignore-rest\n",
-            diff.git(),
+              description,
+              if(!description, "\n"),
+              "\n",
+              surround(
+                "JJ: This commit contains the following changes:\n", "",
+                indent("JJ:     ", diff.summary()),
+              ),
+              "JJ:\n",
+              "JJ: ignore-rest\n",
+              diff.git(),
             )
           '';
         };

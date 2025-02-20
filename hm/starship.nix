@@ -27,9 +27,9 @@
         };
         custom.jj = lib.mkIf config.sys.jj.enable {
           description = "Jujutsu commit details";
-          format = "[($output)\n]";
-          command = '' jj log --ignore-working-copy --no-graph -r @ -T 'concat(separate(" ", label("bookmark", "@"), format_short_change_id_with_hidden_and_divergent_info(self), if(empty, label("empty", "(empty)")), if(description, label("description", description.first_line()), label("empty", description_placeholder))))' '';
-          when = "jj root";
+          format = "($output\n)";
+          command = '' jj log --color always --ignore-working-copy --no-graph -r @ -T 'concat(separate(" ", label("bookmark", "@"), format_short_change_id_with_hidden_and_divergent_info(self), if(empty, label("empty", "(empty)")), if(description, label("description", description.first_line()), label("empty", description_placeholder))))' '';
+          when = "jj --ignore-working-copy root";
           shell = "sh";
         };
         custom.just = {
