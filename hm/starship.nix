@@ -25,6 +25,13 @@
           error_symbol = ''[\$](bold red)'';
           vicmd_symbol = ''[:](bold green)'';
         };
+        custom.jj = lib.mkIf config.sys.jj.enable {
+          description = "Jujutsu commit details";
+          format = "[($output)\n]";
+          command = '' jj log --ignore-working-copy --no-graph -r @ -T 'concat(separate(" ", label("bookmark", "@"), format_short_change_id_with_hidden_and_divergent_info(self), if(empty, label("empty", "(empty)")), if(description, label("description", description.first_line()), label("empty", description_placeholder))))' '';
+          when = "jj root";
+          shell = "sh";
+        };
         custom.just = {
           description = "Whether a justfile is present";
           format = "just [($output) ]($style)";
@@ -98,6 +105,7 @@
           "🦉 "
           "$all" # automatically excludes modules we position explicitly
           ''${esc}\[48;2;242;229;188m${esc}\[K$line_break${esc}\[49m'' # TODO: make this look nicer on dark backgrounds
+          "\${custom.jj}"
           "$jobs"
           "$battery"
           "$status"
