@@ -15,6 +15,8 @@
         aliases = {
           aa = [ "log" "-r" "all()" ];
           update = [ "git" "fetch" "--all-remotes" ];
+          wip = [ "bookmark" "set" "--allow-backwards" "wip" "--revision" ];
+          wop = [ "bookmark" "forget" "wip" ];
         };
         core = {
           fsmonitor = "watchman";
