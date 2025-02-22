@@ -178,6 +178,21 @@
                 hash = "sha256-S+5ZBSJ28dSp0iEfSkHFMLg6gLr8SPQDjUp4+Jo8U+U=";
                 revert = true;
               })
+              (pkgs.writeText "fish-async-prompt-tmp-path.patch" ''
+                --- a/conf.d/__async_prompt.fish
+                +++ b/conf.d/__async_prompt.fish
+                @@ -1,7 +1,9 @@
+                 status is-interactive
+                 or exit 0
+
+                +set -q TMPDIR; or set -l TMPDIR /tmp
+                +mkdir -p $TMPDIR/fish-async-prompt
+                -set -g __async_prompt_tmpdir (command mktemp -d)
+                +set -g __async_prompt_tmpdir (command mktemp --tmpdir -d fish-async-prompt/tmp.XXXXXXXXXX)
+
+                 # Setup after the user defined prompt functions are loaded.
+                 function __async_prompt_setup_on_startup --on-event fish_prompt
+              '')
             ];
           };
         }
