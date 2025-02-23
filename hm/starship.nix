@@ -28,7 +28,7 @@
         custom.jj = lib.mkIf config.sys.jj.enable {
           description = "Jujutsu commit details";
           format = "($output\n)";
-          command = '' jj log --color always --ignore-working-copy --no-graph -r '@|bookmarks(exact:"wip")' -T 'concat(separate(" ", label("bookmark", if(current_working_copy, "@")), label("bookmark", if(bookmarks, bookmarks.filter(|b| b.name() != "wip"))), format_short_change_id_with_hidden_and_divergent_info(self), if(empty, label("empty", "(empty)")), if(description, label("description", description.first_line()), label(if(empty, "empty"), description_placeholder))), "\n")' '';
+          command = '' jj log --color always --no-graph -r '@|bookmarks(exact:"wip")' -T 'concat(separate(" ", label("bookmark", if(current_working_copy, "@")), label("bookmark", if(bookmarks, bookmarks.filter(|b| b.name() != "wip"))), format_short_change_id_with_hidden_and_divergent_info(self), if(empty, label("empty", "(empty)")), if(description, label("description", description.first_line()), label(if(empty, "empty"), description_placeholder))), "\n")' '';
           when = "jj --ignore-working-copy root";
           shell = "sh";
         };
