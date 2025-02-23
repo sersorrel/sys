@@ -14,6 +14,7 @@
       settings = {
         aliases = {
           aa = [ "log" "-r" "all()" ];
+          tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
           update = [ "git" "fetch" "--all-remotes" ];
           wip = [ "bookmark" "set" "--allow-backwards" "wip" "--revision" ];
           wop = [ "bookmark" "forget" "wip" ];
