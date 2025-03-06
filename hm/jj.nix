@@ -58,5 +58,8 @@
         };
       };
     };
+    xdg.configFile."fish/completions/jj.fish".text = lib.mkIf config.sys.fish.enable ''
+      COMPLETE=fish jj | source
+    '';
   };
 }
