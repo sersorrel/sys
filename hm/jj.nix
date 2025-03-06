@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 {
   options = {
@@ -15,6 +15,9 @@
         aliases = {
           aa = [ "log" "-r" "all()" ];
           tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
+          unwip = [ "util" "exec" "--" "bash" "-c" ''
+            jj log --no-graph -r "''${1:-@}" -T description | sed -e 's/^wip: //' | jj desc --stdin "''${1:-@}"
+          '' "bash" ];
           update = [ "git" "fetch" "--all-remotes" ];
           wip = [ "bookmark" "set" "--allow-backwards" "wip" "--revision" ];
           wop = [ "bookmark" "forget" "wip" ];
@@ -24,6 +27,10 @@
         };
         git = {
           private-commits = "description(glob:'wip:*') | description(glob:'private:*')";
+        };
+        revset-aliases = {
+          i = "@";
+          j = "@-";
         };
         templates = {
           draft_commit_description = ''
