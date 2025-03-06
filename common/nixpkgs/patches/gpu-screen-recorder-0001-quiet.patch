@@ -1,13 +1,13 @@
 diff --git a/src/main.cpp b/src/main.cpp
-index f2022f9..e24e8be 100644
+index 5fe9118..b1cdf75 100644
 --- a/src/main.cpp
 +++ b/src/main.cpp
-@@ -2185,7 +2185,7 @@ int main(int argc, char **argv) {
-     bool verbose = true;
-     const char *verbose_str = args["-v"].value();
-     if(!verbose_str)
--        verbose_str = "yes";
-+        verbose_str = "no";
+@@ -3396,7 +3396,7 @@ int main(int argc, char **argv) {
+     }
  
-     if(strcmp(verbose_str, "yes") == 0) {
-         verbose = true;
+     bool overclock = arg_get_boolean_value(args, "-oc", false);
+-    const bool verbose = arg_get_boolean_value(args, "-v", true);
++    const bool verbose = arg_get_boolean_value(args, "-v", false);
+     const bool gl_debug = arg_get_boolean_value(args, "-gl-debug", false);
+     const bool record_cursor = arg_get_boolean_value(args, "-cursor", true);
+     const bool date_folders = arg_get_boolean_value(args, "-df", false);
