@@ -36,6 +36,8 @@
         fish_user_key_bindings = ''
           # https://github.com/fish-shell/fish-shell/wiki/Bash-Style-Command-Substitution-and-Chaining-
           bind ! bang_binding
+          # https://github.com/fish-shell/fish-shell/pull/10213, https://github.com/fish-shell/fish-shell/commit/5de6f4bb3d8c3d4db1fd0b66c2ebfa59682ccc84
+          for mode in (bind --list-modes); bind -M $mode ctrl-c cancel-commandline; end
           # https://github.com/fish-shell/fish-shell/issues/3011
           bind \cf accept-autosuggestion
           # we have fzf for more sophisticated searching
