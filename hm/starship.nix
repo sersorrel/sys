@@ -104,7 +104,7 @@
         in lib.concatStrings [
           "🦉 "
           "$all" # automatically excludes modules we position explicitly
-          ''${esc}\[48;2;242;229;188m${esc}\[K$line_break${esc}\[49m'' # TODO: make this look nicer on dark backgrounds
+          ''${esc}\[48;2;242;229;188m${esc}\[K${esc}\[49m$line_break'' # TODO: make this look nicer on dark backgrounds
           "\${custom.jj}"
           "$jobs"
           "$battery"
