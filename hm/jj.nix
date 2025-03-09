@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = {
@@ -9,6 +9,7 @@
     };
   };
   config = lib.mkIf config.sys.jj.enable {
+    home.packages = [ pkgs.watchman ];
     programs.jujutsu = {
       enable = true;
       settings = {
