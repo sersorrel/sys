@@ -83,6 +83,9 @@
           threshold = 1;
           symbol = "✦ ";
         };
+        nix_shell = {
+          format = "via [$symbol$state]($style) ";
+        };
         shlvl = {
           disabled = false;
           symbol = "↕️ ";
