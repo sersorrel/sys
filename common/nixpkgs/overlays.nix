@@ -16,22 +16,6 @@ in
   } else {})
   (self: super: {
     # out-of-date software/waiting for backports
-    editline = super.editline.overrideAttrs (old: {
-      patches = assert builtins.length old.patches == 3; [
-        (super.fetchpatch {
-          name = "fix-for-home-end-in-tmux.patch";
-          url = "https://github.com/troglobit/editline/commit/265c1fb6a0b99bedb157dc7c320f2c9629136518.patch";
-          sha256 = "sha256-9fhQH0hT8BcykGzOUoT18HBtWjjoXnePSGDJQp8GH30=";
-        })
-        # Pending autoconf-2.72 upstream support:
-        #   https://github.com/troglobit/editline/pull/64
-        (super.fetchpatch {
-          name = "autoconf-2.72.patch";
-          url = "https://github.com/troglobit/editline/commit/f444a316f5178b8e20fe31e7b2d979e651da077e.patch";
-          hash = "sha256-m3jExTkPvE+ZBwHzf/A+ugzzfbLmeWYn726l7Po7f10=";
-        })
-      ];
-    });
     obsidian-export = assert !(super ? obsidian-export); super.callPackage (localPath ./programs/obsidian-export.nix) {};
     unicode-paracode = assert builtins.compareVersions super.unicode-paracode.version "2.9" != 1; super.unicode-paracode.overrideAttrs (old: { # https://github.com/garabik/unicode/pull/21
       patches = (old.patches or []) ++ [
