@@ -12,10 +12,10 @@
     essence-vim = pkgs.vimUtils.buildVimPlugin {
       name = "essence.vim";
       src = pkgs.fetchFromGitHub {
-        owner = "Druid-of-Luhn";
-        repo = "essence.vim";
-        rev = "feb317f277b46409f2fb73601e3db813d8b34480";
-        sha256 = "0340zc8a6867xh57rv6pckpq91kfky7qixpi1q4y2ahhcnfwb63f";
+        owner = "niklasdewally";
+        repo = "conjure.nvim";
+        rev = "d3c33d881aace32b636a2393afa595ff7b75d1c4";
+        sha256 = "sha256-0DA7gS6N827U+pszXfJ29kC3Q6+RBNhECbsfc2CWi8s=";
       };
     };
     vim-angry = pkgs.vimUtils.buildVimPlugin {
@@ -32,8 +32,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "bagrat";
         repo = "vim-buffet";
-        rev = "d4f90cc5b9ef613e6464990f204006d74f89978a";
-        sha256 = "183yb722qh3pvsb3n7vvzqpw7jlv2kcixz34qn3k4bsqj41g8y5y";
+        rev = "3ee5c836cd7ded3526902122e06110cd3f8549cb";
+        sha256 = "sha256-cyZN06Dn+qaL5AjbZfBZIj9Est7b+Q8BYemmWpCt7Gs=";
       };
     };
     vim-crystalline = pkgs.vimUtils.buildVimPlugin {
@@ -41,8 +41,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "rbong";
         repo = "vim-crystalline";
-        rev = "5e797dbebbb7f2863d91a529236341f0971227ce";
-        sha256 = "sha256-uaR8gNcCJBa7SmlKxuaT0BJPF8G6RDMMIPjqKJ8xPMw";
+        rev = "5de2286050fed781f14993cf4a092137fe4ef040";
+        sha256 = "sha256-F6y4UaDnqKD8rIQrzTbPdyonAIGBg9r9tI0t5uubm0A=";
       };
     };
     vim-gml = pkgs.vimUtils.buildVimPlugin {
@@ -68,8 +68,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "kana";
         repo = "vim-textobj-line";
-        rev = "0a78169a33c7ea7718b9fa0fad63c11c04727291";
-        sha256 = "0mppgcmb83wpvn33vadk0wq6w6pg9cq37818d1alk6ka0fdj7ack";
+        rev = "1a6780d29adcf7e464e8ddbcd0be0a9df1a37339";
+        sha256 = "sha256-h7c6PMg4rJMH1f+NibOuQW/ComTmtCMpkCqntezwKTY=";
       };
     };
     vim-textobj-quote = pkgs.vimUtils.buildVimPlugin {
@@ -77,8 +77,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "preservim";
         repo = "vim-textobj-quote";
-        rev = "7ce5b324ebd21f3bc98ec11e534ed4e9677834c9";
-        sha256 = "09k6j3a1dbc9l9ydsbh3cad2ibdwr4gkxp70hphf3q43gamm3x51";
+        rev = "e99ad285c950576a394a64ff334106b32b23418a";
+        sha256 = "sha256-SkQavbxgq9WSeoZZnwRWHaHtku82xdgBjHrTz02kNKk=";
       };
     };
   in {
