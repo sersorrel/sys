@@ -30,6 +30,7 @@
           private-commits = "description(glob:'wip:*') | description(glob:'private:*')";
         };
         revset-aliases = {
+          h = "@+";
           i = "@";
           j = "@-";
         };
