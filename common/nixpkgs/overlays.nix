@@ -16,7 +16,6 @@ in
   } else {})
   (self: super: {
     # out-of-date software/waiting for backports
-    obsidian-export = assert !(super ? obsidian-export); super.callPackage (localPath ./programs/obsidian-export.nix) {};
     unicode-paracode = assert builtins.compareVersions super.unicode-paracode.version "2.9" != 1; super.unicode-paracode.overrideAttrs (old: { # https://github.com/garabik/unicode/pull/21
       patches = (old.patches or []) ++ [
         (super.fetchpatch {
