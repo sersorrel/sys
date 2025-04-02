@@ -55,7 +55,6 @@
             passthru.scriptName = "osc.lua"; # TODO FIXME: this probably overrides any existing passthru...
           }))
         ];
-        # TODO: mute on step forwards: https://github.com/mpv-player/mpv/issues/6104
       };
       defaultProfiles = [ "gpu-hq" ];
       config = {
@@ -72,6 +71,7 @@
         END = "seek 100 absolute-percent+exact";
         UP = "ignore";
         DOWN = "ignore";
+        "." = "frame-step 1 mute";
       };
     };
   };
