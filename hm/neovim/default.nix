@@ -139,36 +139,51 @@
         {
           plugin = vim-crystalline;
           config = ''
-            function! StatusLine(current, width)
+            function! g:CrystallineGroupSuffix()
+              if mode() ==# 'i' && &paste
+                return '2'
+              endif
+              if &modified
+                return '1'
+              endif
+              return ""
+            endfunction
+            function! g:CrystallineStatuslineFn(winnr)
               let l:s = ""
-              if a:current
-                let l:s .= crystalline#mode() . crystalline#right_mode_sep("")
+              let l:current = a:winnr == winnr()
+              let l:width = winwidth(a:winnr)
+              let g:crystalline_group_suffix = g:CrystallineGroupSuffix()
+              if l:current
+                let l:s .= crystalline#ModeSection(0, 'A', 'B')
               else
-                let l:s .= '%#CrystallineInactive#'
+                let l:s .= crystalline#HiItem('Fill')
               endif
               let l:s .= ' %f%h%w%m%r '
-              if a:current
-                let l:s .= crystalline#right_sep("", 'Fill') . ' %{FugitiveHead()}'
+              if l:current
+                let l:s .= crystalline#Sep(0, 'B', 'Fill') . ' %{FugitiveHead()}'
               endif
               let l:s .= '%='
-              if a:current
-                let l:s .= crystalline#left_sep("", 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
-                let l:s .= crystalline#left_mode_sep("")
+              if l:current
+                let l:s .= crystalline#Sep(1, 'Fill', 'B') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
+                let l:s .= crystalline#Sep(1, 'B', 'A')
               endif
-              if a:width > 80
+              if l:width > 80
                 let l:s .= ' %{&ft}[%{&fenc!=#""?&fenc:&enc}][%{&ff}] %l/%L %c%V %P '
               else
                 let l:s .= ' '
               endif
               return l:s
             endfunction
-            function! TabLine()
+            function! g:CrystallineTablineFn()
+              let l:max_width = &columns
+              let l:right = '%='
+              let l:right .= crystalline#Sep(1, 'TabFill', 'TabType')
+              let l:max_width -= 1
               let l:vimlabel = has('nvim') ?  ' NVIM ' : ' VIM '
-              return crystalline#bufferline(2, len(l:vimlabel), 1) . '%=%#CrystallineTab# ' . l:vimlabel
+              let l:right .= l:vimlabel
+              let l:max_width -= strchars(l:vimlabel)
+              return crystalline#DefaultTabline({'enable_sep': 1, 'max_width': l:max_width}) . l:right
             endfunction
-            let g:crystalline_enable_sep = 1
-            let g:crystalline_statusline_fn = 'StatusLine'
-            let g:crystalline_tabline_fn = 'TabLine'
             let g:crystalline_theme = 'gruvbox'
             set showtabline=2
             set guioptions-=e
