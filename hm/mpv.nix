@@ -47,8 +47,8 @@
             src = pkgs.fetchFromGitHub {
               owner = "po5";
               repo = "thumbfast";
-              rev = "5fefc9b8e995cf5e663666aa10649af799e60186"; # vanilla-osc branch
-              hash = "sha256-6nICOdtPzDQUMufqCJ+g2OnPasOgp3PegnRoWw8TVBU=";
+              rev = "9d78edc167553ccea6290832982d0bc15838b4ac"; # vanilla-osc branch
+              hash = "sha256-AG3w5B8lBcSXV4cbvX3nQ9hri/895xDbTsdaqF+RL64=";
             };
             passthru.scriptName = "player/lua/osc.lua";
           }).overrideAttrs (old: {
