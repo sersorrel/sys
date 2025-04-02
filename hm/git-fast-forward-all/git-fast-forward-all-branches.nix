@@ -9,7 +9,7 @@ stdenv.mkDerivation {
   pname = "git-fast-forward-all";
   version = "unstable-2020-05-07";
   src = fetchFromGitHub {
-    owner = "changyuheng";
+    owner = "mrjohannchang";
     repo = "git-fast-forward-all-branches";
     rev = "8406978fd1a34df0f4fb42e9853cd7f2fdb67601";
     sha256 = "1vhii1kp3hqk3hwc84qz77bz8bhrv8sg8khgisqpk3idld37jz48";
