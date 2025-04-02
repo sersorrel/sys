@@ -104,18 +104,6 @@ in
       ];
     });
     # software not in nixpkgs
-    uoyweek = super.rustPlatform.buildRustPackage {
-      pname = "uoyweek";
-      version = "0.1.0";
-      src = super.fetchFromGitHub {
-        owner = "sersorrel";
-        repo = "uoyweek.rs";
-        rev = "d32e4096dee51641270cb4b624d7b0727f101f42";
-        sha256 = "17a2173myj6fxmgyaly6nz905b94vw6zr8qm5v2ig7yrxlqd9nnk";
-      };
-      useFetchCargoVendor = true;
-      cargoHash = super.lib.fakeHash;
-    };
     binary-ninja = super.callPackage (localPath ./programs/binary-ninja.nix) {};
     display-volume = super.rustPlatform.buildRustPackage {
       pname = "display-volume";
