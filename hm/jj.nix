@@ -15,6 +15,7 @@
       settings = {
         aliases = {
           aa = [ "log" "-r" "all()" ];
+          blt = [ "b" "l" "-t" ];
           tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
           unwip = [ "util" "exec" "--" "bash" "-c" ''
             jj log --no-graph -r "''${1:-@}" -T description | sed -e 's/^wip: //' | jj desc --stdin "''${1:-@}"
