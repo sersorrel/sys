@@ -194,25 +194,6 @@
         essence-vim
         vim-gml
         vim-just
-        {
-          plugin = vim-polyglot;
-          config = ''
-            " Enable LaTeX math support in Markdown.
-            let g:vim_markdown_math = 1
-            " Highlight YAML and TOML frontmatter.
-            let g:vim_markdown_frontmatter = 1
-            let g:vim_markdown_toml_frontmatter = 1
-            " Don't automatically insert bulletpoints (it doesn't always behave properly).
-            let g:vim_markdown_auto_insert_bullets = 0
-            let g:vim_markdown_new_list_item_indent = 0
-            " Disable automatic folding.
-            let g:vim_markdown_folding_disabled = 1
-            " Don't conceal code blocks.
-            let g:vim_markdown_conceal_code_blocks = 0
-            " Render strikethrough as strikethrough.
-            let g:vim_markdown_strikethrough = 1
-          '';
-        }
         # Text objects
         vim-angry
         {
