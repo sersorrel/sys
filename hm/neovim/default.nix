@@ -104,6 +104,7 @@
         vim-repeat
         vim-scriptease
         vim-sensible
+        vim-sleuth
         vim-speeddating
         vim-surround
         # Appearance
