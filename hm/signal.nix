@@ -9,6 +9,6 @@
     };
   };
   config = lib.mkIf config.sys.signal.enable {
-    home.packages = [ pkgs.signal-desktop ];
+    home.packages = [ pkgs.signal-desktop-bin ];
   };
 }
