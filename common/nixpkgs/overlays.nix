@@ -16,6 +16,19 @@ in
   } else {})
   (self: super: {
     # out-of-date software/waiting for backports
+    termtheme = assert !(super ? termtheme); super.rustPlatform.buildRustPackage {
+      pname = "termtheme";
+      version = "0-unstable-2025-01-24";
+      src = super.fetchFromGitHub {
+        owner = "bash";
+        repo = "terminal-colorsaurus";
+        rev = "f99ff455e2d3272c9accf3cee6b759c1702d7892";
+        hash = "sha256-LZdXKJYEq2L4zhVWVZCJbM9zf3cmNpdBWK4hQv1W4+0=";
+      };
+      useFetchCargoVendor = true;
+      cargoHash = "sha256-dzIjYAizPDe5//YHV7DyxVNHrF7xfLMJdK6x+YI2hQA=";
+      buildAndTestSubdir = "crates/termtheme";
+    };
     unicode-paracode = assert builtins.compareVersions super.unicode-paracode.version "2.9" != 1; super.unicode-paracode.overrideAttrs (old: { # https://github.com/garabik/unicode/pull/21
       patches = (old.patches or []) ++ [
         (super.fetchpatch {

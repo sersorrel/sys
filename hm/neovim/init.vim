@@ -1,6 +1,3 @@
-" Avoid slow background-colour detection. TODO: make this less bad.
-set bg=light
-
 " Highlight highlighted columns with a dark grey background.
 highlight ColorColumn ctermbg=darkgrey ctermfg=white
 

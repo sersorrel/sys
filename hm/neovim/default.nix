@@ -1,4 +1,4 @@
-{ config, lib, pkgs, unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = {
@@ -111,7 +111,6 @@
         {
           plugin = gruvbox-community;
           config = ''
-            set termguicolors
             let g:gruvbox_undercurl = 1
             let g:gruvbox_contrast_light = 'hard'
             let g:gruvbox_invert_selection = 0
@@ -338,6 +337,23 @@
     };
     home.packages = [
       pkgs.nil
+      (
+        (pkgs.writeShellScriptBin "nvim" ''
+          theme=$(${pkgs.termtheme}/bin/termtheme --force)
+          case $theme in
+            light|dark)
+              ${config.programs.neovim.finalPackage}/bin/nvim --cmd "set bg=$theme" "$@"
+              ;;
+            *)
+              ${config.programs.neovim.finalPackage}/bin/nvim "$@"
+              ;;
+          esac
+        '').overrideAttrs (old: {
+          meta = (old.meta or {}) // {
+            priority = config.programs.neovim.finalPackage.meta.priority - 1;
+          };
+        })
+      )
     ];
   });
 }
