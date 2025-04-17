@@ -41,8 +41,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "rbong";
         repo = "vim-crystalline";
-        rev = "5de2286050fed781f14993cf4a092137fe4ef040";
-        sha256 = "sha256-F6y4UaDnqKD8rIQrzTbPdyonAIGBg9r9tI0t5uubm0A=";
+        rev = "3d1b744439f5fcdae9b58d58639fc85c37e1e0a6";
+        sha256 = "sha256-XvEPEBCvJIocIu12ZF8aqncjoBd2H4JX365MnvsD3zI=";
       };
     };
     vim-gml = pkgs.vimUtils.buildVimPlugin {
