@@ -48,6 +48,17 @@ in
         })
       ];
     });
+    xfce = super.xfce.overrideScope (self': super': {
+      tumbler = super'.tumbler.overrideAttrs (old: {
+        patches = (old.patches or []) ++ [
+          (super.fetchpatch {
+            name = "only-use-embedded-pdf-thumbnail-if-resolution-suffices.patch";
+            url = "https://gitlab.xfce.org/xfce/tumbler/-/merge_requests/35.patch";
+            hash = "sha256-aFJoWWzTaikqCw6C1LH+BFxst/uKkOGT1QK9Mx8/8/c=";
+          })
+        ];
+      });
+    });
     # custom patches
     gpu-screen-recorder = super.gpu-screen-recorder.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
