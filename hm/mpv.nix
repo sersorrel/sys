@@ -65,6 +65,7 @@
         screenshot-directory = builtins.replaceStrings ["$HOME"] ["${config.home.homeDirectory}"] "${config.xdg.userDirs.pictures}/Screenshots/mpv";
         screenshot-template = "%tF %tT %F %P %#n";
         replaygain = "track";
+        osc = false; # replaced by thumbfast's osc.lua https://github.com/po5/thumbfast/issues/148
       };
       bindings = {
         HOME = "seek 0 absolute+exact";
