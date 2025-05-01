@@ -38,6 +38,13 @@ in
         })
       ];
     });
+    vimPlugins = super.vimPlugins.extend (self': super': {
+      gruvbox-community = super'.gruvbox-community.overrideAttrs (old: {
+        patches = (old.patches or []) ++ [
+          (localPath ./patches/gruvbox-0001-background.patch)
+        ];
+      });
+    });
     wireplumber = assert super.wireplumber.version == "0.5.8"; super.wireplumber.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (super.fetchpatch {
