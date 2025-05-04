@@ -6,13 +6,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "some";
-  version = "unstable-2023-01-23";
+  version = "unstable-2025-05-04";
 
   src = fetchFromGitHub {
     owner = "keysmashes";
     repo = "some.rs";
-    rev = "fa864cc06cb6c4af4644adb34957f6ab423526af";
-    sha256 = "1jnq14z7r2wgpxnmr3g2jfrz8l13a9pfxjdj4wlj8hbni5wag37j";
+    rev = "6fabc71fa75104bceccb0ce6c4087a8089fd7786";
+    sha256 = "12f07qlkzqlw7lnndpad2rks9z68ngw9alcshdldrsm39fvai0q9";
   };
 
   useFetchCargoVendor = true;
