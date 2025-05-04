@@ -70,7 +70,7 @@ in
     });
     i3lock-color = super.i3lock-color.overrideAttrs (old: {
       src = super.fetchFromGitHub {
-        owner = "sersorrel";
+        owner = "keysmashes";
         repo = "i3lock-color";
         rev = "8ab09b8d3fdd87ac0b14a3f419281a4791fa2c78";
         sha256 = "1l25x4wx3ar6lfpxcm5whzpxyblcs8blf4gqi3vh2ynvn7cn1qib";
@@ -128,7 +128,7 @@ in
       pname = "display-volume";
       version = "0.1.0";
       src = super.fetchFromGitHub {
-        owner = "sersorrel";
+        owner = "keysmashes";
         repo = "display-volume";
         rev = "318a70933869d3a5c50bce06bda2887c3c287e84";
         sha256 = "1gqyxggxwk87ddcsisb4s1rw8f9z8lyxg95py0nn77q18w6f6srg";
@@ -148,7 +148,7 @@ in
         pname = "fenv.rs";
         version = "unstable-2023-07-12";
         src = super.fetchFromGitHub {
-          owner = "sersorrel";
+          owner = "keysmashes";
           repo = "fenv.rs";
           rev = "6bff44ff5b636407149d22dcf4776a22e71908ec";
           sha256 = "sha256-jWaEd6G44j9sZtdBUxp5gCrlcYXrecUXeVo+foyfVfM=";

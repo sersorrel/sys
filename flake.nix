@@ -2,7 +2,7 @@
   description = "dependency flake for my system configurations";
 
   inputs = {
-    moonlight.url = "github:sersorrel/null";
+    moonlight.url = "github:keysmashes/null";
   };
 
   outputs = inputs: {
