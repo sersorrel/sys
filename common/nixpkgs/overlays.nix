@@ -16,6 +16,15 @@ in
   } else {})
   (self: super: {
     # out-of-date software/waiting for backports
+    neovim-unwrapped = super.neovim-unwrapped.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (super.fetchpatch {
+          name = "fix-desktop-entry-quoting.patch";
+          url = "https://github.com/neovim/neovim/pull/33684.patch";
+          hash = "sha256-ktrIFp8Z6NCKc2DgarOnW/UwPC7vN0yS4i9RRWKDGKA=";
+        })
+      ];
+    });
     termtheme = assert !(super ? termtheme); super.rustPlatform.buildRustPackage {
       pname = "termtheme";
       version = "0-unstable-2025-01-24";
