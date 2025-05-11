@@ -19,7 +19,7 @@ in
   };
   config = {
     nix = {
-      settings.experimental-features = [ "nix-command" "flakes" ] ++ lib.optional config.sys.lix.enable "repl-flake";
+      settings.experimental-features = [ "nix-command" "flakes" ];
       settings.keep-outputs = true;
       settings.connect-timeout = 10;
       settings.log-lines = 20;
