@@ -65,6 +65,7 @@
         "*.py diff=python"
       ];
       ignores = [
+        ".jj/"
         "__pycache__/"
         "*.py[co]"
         "/build/"
