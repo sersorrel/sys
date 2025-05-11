@@ -4,6 +4,8 @@ highlight ColorColumn ctermbg=darkgrey ctermfg=white
 " Unmap F1 to avoid accidentally opening the help pages.
 nnoremap <F1> <nop>
 inoremap <F1> <nop>
+" Prevent shift-enter scrolling down
+nmap <S-CR> <CR>
 
 " Buffer-switching keybinds.
 " NB: mapping <tab> in normal mode breaks ctrl-I!
