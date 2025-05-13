@@ -161,8 +161,6 @@ set hlsearch
 
 " Persist indent of the current line when pressing enter.
 set autoindent
-" When indentexpr isn't available, fall back to C-like indent rules.
-set cindent
 " Snap to multiples of shiftwidth when indenting.
 set shiftround
 
