@@ -13,12 +13,26 @@
     programs.jujutsu = {
       enable = true;
       settings = {
-        aliases = {
+        aliases = let
+          mkBashScript = text: [ "util" "exec" "--" "bash" "-c" text "bash" ];
+        in {
           aa = [ "log" "-r" "all()" ];
           blt = [ "b" "l" "-t" ];
+          bn = mkBashScript ''
+            jj b m "$1" -t "($1)+"
+          '';
+          bp = mkBashScript ''
+            jj b m "$1" -t "($1)-"
+          '';
+          link = mkBashScript ''
+            jj rebase -s "$2" -d "all:($2)-" -d "$1"
+          '';
           pog = [ "op" "log" "-p" ];
           shop = [ "op" "show" "-p" ];
           tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
+          unlink = mkBashScript ''
+            jj rebase -s "$2" -d "all:($2)- ~ ($1)"
+          '';
           unwip = [ "util" "exec" "--" "bash" "-c" ''
             jj log --no-graph -r "''${1:-@}" -T description | sed -e 's/^wip: //' | jj desc --stdin "''${1:-@}"
           '' "bash" ];
