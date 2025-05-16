@@ -29,6 +29,9 @@
           '';
           pog = [ "op" "log" "-p" ];
           shop = [ "op" "show" "-p" ];
+          slink = mkBashScript ''
+            jj link "$1" "$2" && jj simplify-parents -r "$2"
+          '';
           tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
           unlink = mkBashScript ''
             jj rebase -s "$2" -d "all:($2)- ~ ($1)"
