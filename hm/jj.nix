@@ -25,6 +25,7 @@
             jj b m "$1" -t "($1)-"
           '';
           hash = [ "show" "-T" "stringify(commit_id)" ];
+          id = [ "show" "-T" "stringify(change_id)" ];
           link = mkBashScript ''
             jj rebase -s "$2" -d "all:($2)-" -d "$1"
           '';
