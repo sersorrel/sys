@@ -24,6 +24,7 @@
           bp = mkBashScript ''
             jj b m "$1" -t "($1)-"
           '';
+          hash = [ "show" "-T" "stringify(commit_id)" ];
           link = mkBashScript ''
             jj rebase -s "$2" -d "all:($2)-" -d "$1"
           '';
