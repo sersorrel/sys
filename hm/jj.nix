@@ -24,6 +24,7 @@
           bp = mkBashScript ''
             jj b m "$1" -t "($1)-"
           '';
+          drop = [ "abandon" ];
           hash = [ "show" "-T" "stringify(commit_id)" ];
           id = [ "show" "-T" "stringify(change_id)" ];
           link = mkBashScript ''
