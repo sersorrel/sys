@@ -21,6 +21,9 @@
           bn = mkBashScript ''
             jj b m "$1" -t "($1)+"
           '';
+          bnew = mkBashScript ''
+            jj new --no-edit "$@" && jj bn "''${@:$#}"
+          '';
           bp = mkBashScript ''
             jj b m "$1" -t "($1)-"
           '';
