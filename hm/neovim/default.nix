@@ -316,7 +316,18 @@
         }
         nvim-cmp
         plenary-nvim
-        rust-tools-nvim
+        {
+          plugin = rustaceanvim;
+          config = ''
+            vim.g.rustaceanvim = {
+              tools = {
+                float_win_config = {
+                  auto_focus = true,
+                },
+              },
+            }
+          '';
+        }
         # Linting
         {
           plugin = nvim-lint;

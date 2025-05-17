@@ -327,25 +327,6 @@ set completeopt=menuone,noselect
 
 " LSP (and similar IDE-like things) configuration
 lua <<EOF
--- set up rust-analyzer via rust-tools.nvim
--- https://sharksforarms.dev/posts/neovim-rust/
-require'rust-tools'.setup{
-  tools = { -- rust-tools options
-    hover_actions = {
-      auto_focus = true,
-      },
-    },
-  server = { -- nvim-lspconfig options
-    settings = {
-      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
-      ["rust-analyzer"] = {
-        checkOnSave = {
-          command = "clippy",
-          },
-        },
-      },
-    },
-  }
 
 -- set up cmp, see https://github.com/hrsh7th/nvim-cmp#basic-configuration
 local cmp = require'cmp'
