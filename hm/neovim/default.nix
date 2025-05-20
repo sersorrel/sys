@@ -319,6 +319,7 @@
         {
           plugin = rustaceanvim;
           config = ''
+            lua <<EOF
             vim.g.rustaceanvim = {
               tools = {
                 float_win_config = {
@@ -326,6 +327,7 @@
                 },
               },
             }
+            EOF
           '';
         }
         # Linting
