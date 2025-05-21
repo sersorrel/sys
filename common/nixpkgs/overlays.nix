@@ -19,7 +19,10 @@ in
     neovim-unwrapped = super.neovim-unwrapped // (self.applyPatches { # hack hack hack, but we don't want to rebuild neovim
       src = super.neovim-unwrapped;
       postPatch = ''
-        sed -i 's/"%F"/%F/' share/applications/nvim.desktop
+        # this doesn't exist on darwin apparently
+        if test -e share/applications/nvim.desktop; then
+          sed -i 's/"%F"/%F/' share/applications/nvim.desktop
+        fi
       '';
     });
     termtheme = assert !(super ? termtheme); super.rustPlatform.buildRustPackage {
